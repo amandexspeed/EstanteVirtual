@@ -1,0 +1,166 @@
+*{
+
+    padding: 0;
+    margin: 0;
+
+}
+
+body{
+
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.theme.dark{
+
+    color: white;
+    background-color: black;
+    
+
+}
+
+.pesquisa{
+
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+    width:85vw;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.pesquisa input{
+
+    margin: 1% 0;
+
+}
+
+.resultado{
+ 
+    height: 80vh;
+
+}
+
+
+.resultado li{
+
+    display: flex;
+    padding-bottom: 2%;
+    border: 1px solid ;
+
+}
+
+.info{
+
+    text-decoration: underline solid 1px;
+ 
+}
+
+.info:hover{
+
+    color: cyan;
+
+}
+
+.pesquisa input{
+    height: 10%;
+    width: 60%;
+    
+}
+
+.pesquisa button{
+    height: 10%;
+    width: 60%;
+   
+}
+
+#lista{
+
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.boxP{
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.pTítulo{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+@media only screen and (min-width:768px) {
+
+    .resultado li img{
+        margin: auto 0 auto 1%;
+        height: 15vw;
+        width: 10vw;
+        margin-right: 2%;
+        
+
+    }
+}
+
+@media only screen and (max-width:768px) {
+
+    .resultado li img{
+        margin: auto 0 auto 1%;
+        height: 35vw;
+        width: 30vw;
+        margin-right: 2%;
+        
+
+    }
+}
+
+@media only screen and (min-width:2560px) {
+
+    .resultado li {
+        font-size: 25px;
+    }
+
+    .pTítulo{
+        font-size: 40px;
+    }
+
+    .pesquisa{
+
+        height: 60vh;
+        width: 80vw;
+        padding: 0;
+        font-size: 25px;
+    }
+
+    #lista{
+
+        height: 75vh;
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    .pesquisa input{
+        height: 10%;
+        width: 60%;
+        font-size: 25px;
+        
+    }
+
+    .pesquisa button{
+        height: 10%;
+        width: 60%;
+        font-size: 25px;
+    }
+}
