@@ -23,15 +23,12 @@ async function loadData(){
             console.log(data.results[i].original_title);
             var li = document.createElement("li");
 
-           /*  var img = document.createElement("img");
+           var img = document.createElement("img");
 
            
             if(data.results[i].backdrop_path!=null){ 
                 
-                var path = data.results[i].backdrop_path;
-                var padrão = new RegExp("([/])+","g");
-                path = path.replace(padrão,"")
-                console.log(path);
+                var path = (`https://image.tmdb.org/t/p/w200${data.results[i].backdrop_path}`);
                 img.src = path;
                 
             }
@@ -39,7 +36,7 @@ async function loadData(){
 
                 img.src = "https://th.bing.com/th/id/OIP.hMlLJSmMJky9Rd1JwB86VgHaFl?w=244&h=185&c=7&r=0&o=5&dpr=1.3&pid=1.7";
                 
-            }  */
+            }  
 
             var div = document.createElement("div");
             div.setAttribute("class","boxP");
@@ -106,7 +103,7 @@ async function loadData(){
             a.textContent="Link para informações - Google livros";
             div.appendChild(a); */
 
-            /* li.appendChild(img); */
+             li.appendChild(img); 
             li.appendChild(div);
             list.appendChild(li);
 
