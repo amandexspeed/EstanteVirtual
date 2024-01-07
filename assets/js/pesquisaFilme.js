@@ -26,9 +26,12 @@ async function loadData(){
             var img = document.createElement("img");
 
            
-            if(data.items[i].backdrop_path!=null){ 
+            if(data.results[i].backdrop_path!=null){ 
                 
-                img.src = data.items[i].backdrop_path;
+                var path = data.results[i].backdrop_path
+                path = new RegExp("([^/])\w+","g")
+                console.log(path);
+                img.src = path;
                 
             }
             else{
@@ -67,12 +70,12 @@ async function loadData(){
                    if(e.target.classList.contains("menos")){
 
                         e.target.textContent ="Menos informações";
-                        pDesc.textContent = data.items[e.target.id].volumeInfo.description;;
+                        pDesc.textContent = data.results[e.target.id].overview;
 
                     }else{
 
                         e.target.textContent="Ler descrição completa";
-                        var text= data.items[e.target.id].volumeInfo.description;
+                        var text= data.results[e.target.id].overview;
                         text = text.slice(0,500);
                         pDesc.textContent = text + "...";
 
@@ -94,13 +97,13 @@ async function loadData(){
                 }
             }
 
-            var a = document.createElement("a");
+            /* var a = document.createElement("a");
             
             a.setAttribute("href",data.items[i].volumeInfo.infoLink);
             a.target='_blank' 
             a.rel="noopener noreferrer"
             a.textContent="Link para informações - Google livros";
-            div.appendChild(a);
+            div.appendChild(a); */
 
             li.appendChild(img);
             li.appendChild(div);
