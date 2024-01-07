@@ -1,19 +1,5 @@
 const key = "AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4";
 
-function loadingTheme(){
-
-    let lightMode = window.matchMedia ("(prefers-color-scheme: light)");
-    let theme = document.querySelector(".theme");
-
-    if (lightMode.matches) {
-
-        theme.classList.remove('dark');
-        theme.classList.add('light');
-    
-    }
-
-}
-
 async function loadData(){
 
     var name = document.getElementById("titulo").value;

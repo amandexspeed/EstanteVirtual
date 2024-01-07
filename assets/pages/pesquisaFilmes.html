@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estante virtual</title>
+    <script src="../js/script.js" defer></script>
+    <script src="../js/pesquisaFilme.js" defer></script>
+
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="theme dark" onload="loadingTheme()">
+    
+    <div class="pesquisa">
+        <a href="../../index.html">Tela Inicial</a>
+        <p>Nome do filme</p>
+        <input type="text" name="titulo" id="titulo" placeholder="Digite o nome do filme">
+        <button type="button" onclick="loadData()">Pesquisar</button>
+
+    </div>
+
+    <div class="resultado">
+
+        <ol id="lista"></ol>
+
+    </div>
+
+</body>
+</html>
