@@ -29,8 +29,8 @@ async function loadData(){
             if(data.results[i].backdrop_path!=null){ 
                 
                 var path = data.results[i].backdrop_path;
-                var padrão = new RegExp("([^/])\w+","g");
-                path = path.match(padrão)
+                var padrão = new RegExp("([/])+","g");
+                path = path.replace(padrão,"")
                 console.log(path);
                 img.src = path;
                 
