@@ -105,8 +105,8 @@ body{
 
     .resultado li img{
         margin: auto 0 auto 1%;
-        height: 15vw;
-        width: 10vw;
+        max-height: 15vw;
+        max-width: 10vw;
         margin-right: 2%;
         
 

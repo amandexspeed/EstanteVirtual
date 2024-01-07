@@ -28,7 +28,7 @@ async function loadData(){
            
             if(data.results[i].backdrop_path!=null){ 
                 
-                var path = (`https://image.tmdb.org/t/p/w200${data.results[i].backdrop_path}`);
+                var path = (`https://image.tmdb.org/t/p/w500${data.results[i].poster_path}`);
                 img.src = path;
                 
             }
