@@ -5,7 +5,7 @@ async function loadData(){
     var name = document.getElementById("titulo").value;
     var list = document.getElementById("lista");
 
-    var data = await fetch(`https://api.themoviedb.org/3/search/movie?query=${name}&api_key=${key}`).then(Response=>Response.json());
+    var data = await fetch(`https://api.themoviedb.org/3/search/movie?query=${name}&language=pt-BR&api_key=${key}`).then(Response=>Response.json());
     console.log(data)
 
     while (list.firstChild) {
@@ -23,7 +23,7 @@ async function loadData(){
             console.log(data.results[i].original_title);
             var li = document.createElement("li");
 
-            var img = document.createElement("img");
+           /*  var img = document.createElement("img");
 
            
             if(data.results[i].backdrop_path!=null){ 
@@ -39,13 +39,13 @@ async function loadData(){
 
                 img.src = "https://th.bing.com/th/id/OIP.hMlLJSmMJky9Rd1JwB86VgHaFl?w=244&h=185&c=7&r=0&o=5&dpr=1.3&pid=1.7";
                 
-            } 
+            }  */
 
             var div = document.createElement("div");
             div.setAttribute("class","boxP");
 
             var pTitle = document.createElement("p");
-            pTitle.textContent= data.results[i].original_title;
+            pTitle.textContent= data.results[i].title;
             pTitle.setAttribute("class","pTítulo");
             div.appendChild(pTitle);
 
@@ -106,7 +106,7 @@ async function loadData(){
             a.textContent="Link para informações - Google livros";
             div.appendChild(a); */
 
-            li.appendChild(img);
+            /* li.appendChild(img); */
             li.appendChild(div);
             list.appendChild(li);
 
