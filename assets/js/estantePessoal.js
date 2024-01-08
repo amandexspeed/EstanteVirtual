@@ -1,4 +1,3 @@
-var chaveAcesso = 0;
 var select = document.getElementById("opc");
 
 const client = google.accounts.oauth2.initTokenClient({
