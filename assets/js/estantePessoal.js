@@ -20,8 +20,8 @@ const client = google.accounts.oauth2.initTokenClient({
         
             } */
 
-            data = fetch(`https://www.googleapis.com/books/v1/mylibrary/bookshelves&access_token=${tokenResponse.access_token}`).then(response => response.json());
-            /* ?key=AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4  */
+            data = fetch(`https://www.googleapis.com/books/v1/mylibrary/bookshelves?key=AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4&access_token=${tokenResponse.access_token}`).then(response => response.json());
+            /*   */
             console.log("Chamou API")
             console.log(data);
 
