@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin-allow-popups" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estante virtual</title>
     <script src="../js/script.js" defer></script>
     <script src="../js/estantePessoal.js" defer></script>
-
     <script src="https://apis.google.com/js/api:client.js"></script>
     <script src="https://accounts.google.com/gsi/client" 
      onload="console.log('TODO: add onload function')">  
@@ -26,21 +26,23 @@
 
         <div id="gSignInWrapper">
             <span class="label">Logue para continuar:</span>
-            <button type="button" id="BtnApg" ></button>
                 <div id="customBtn" onclick="client.requestAccessToken()" class="customGPlusSignIn">
 
                     <span class="icon"></span>
                     <span class="buttonText">Google</span>
+                    
 
                 </div>
         </div>
-    </button>
+
+        <select name="estantes" id="opc">
+
+
+        </select>
         
     </div>
 
     <div class="resultado">
-
-        <select name="estantes" id="opc"></select>
 
         <ol id="lista"></ol>
 
