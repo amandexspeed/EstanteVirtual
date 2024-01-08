@@ -6,42 +6,25 @@ const client = google.accounts.oauth2.initTokenClient({
         console.log(tokenResponse)
         console.log(tokenResponse.access_token);
         if (tokenResponse!=null && tokenResponse.access_token!=null) {
-         
-         /*  console.log("Entrou!")
-          gapi.client.setApiKey('AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4');
-          gapi.client.load("books","v1",function(){*/
           
           console.log("Entrou");
-             
-            /* const info = {
-
-                method:'GET',
-                Authorization: `Bearer ${tokenResponse.access_token}`
-        
-            } */
 
             data = fetch(`https://www.googleapis.com/books/v1/mylibrary/bookshelves?key=AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4&access_token=${tokenResponse.access_token}`).then(response => response.json());
-            /*   */
-            console.log("Chamou API")
-            console.log(data);
-
-          /* }) */
-          
+            console.log(data);       
         }
     },
   });
 
+
+  function renderButton() {
+    gapi.signin2.render('my-signin2', {
+      'scope': 'profile email',
+      'width': 240,
+      'height': 50,
+      'longtitle': true,
+      'theme': 'dark',
+      'onsuccess': onSuccess,
+      'onfailure': onFailure
+    });
+  }
   
-
-/* sync function testeGoogle(){
-
-    const info = {
-
-        method:'GET',
-        Authorization: "380330172484-a5l4ppmvnvlq48d7cumdmep189s7sv6g.apps.googleusercontent.com"
-
-    }
-
-    data = await fetch("https://www.googleapis.com/books/v1/mylibrary/bookshelves?key=AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4",info).then(response => response.json());
-
-} */
