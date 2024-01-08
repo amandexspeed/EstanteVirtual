@@ -4,23 +4,30 @@ const client = google.accounts.oauth2.initTokenClient({
     callback: (tokenResponse) => {
         console.log("Entrou!")
         console.log(tokenResponse)
-        if (tokenResponse && tokenResponse.access_token) {
+        console.log(tokenResponse.access_token);
+        if (tokenResponse!=null && tokenResponse.access_token!=null) {
+         
+         /*  console.log("Entrou!")
           gapi.client.setApiKey('AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4');
-          console.log(tokenResponse.access_token);
-          gapi.client.load("books","v1",function(){
-
+          gapi.client.load("books","v1",function(){*/
+          
+          console.log("Entrou");
+             
             const info = {
 
                 method:'GET',
-                Authorization: tokenResponse.access_token
+                Authorization: `Bearer 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`
         
             }
 
-            data = fetch("https://www.googleapis.com/books/v1/mylibrary/bookshelves?key=AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4",info).then(response => response.json());
+            console.log("Setou")
 
+            data = fetch("https://www.googleapis.com/books/v1/mylibrary/bookshelves",info).then(response => response.json());
+            /* ?key=AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4  */
+            console.log("Chamou API")
             console.log(data);
 
-          })
+          /* }) */
           
         }
     },
