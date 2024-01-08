@@ -7,27 +7,17 @@ const client = google.accounts.oauth2.initTokenClient({
         console.log(tokenResponse.access_token);
         if (tokenResponse!=null && tokenResponse.access_token!=null) {
          
-         /*  console.log("Entrou!")
           gapi.client.setApiKey('AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4');
-          gapi.client.load("books","v1",function(){*/
-          
+          gapi.client.setToken(tokenResponse.access_token);
+          gapi.client.load("https://www.googleapis.com/books/v1/user/userId/bookshelves/shelf/volumes",function(){
+        
           console.log("Entrou");
              
-            const info = {
-
-                method:'GET',
-                Authorization: `Bearer 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`
-        
-            }
-
-            console.log("Setou")
-
-            data = fetch("https://www.googleapis.com/books/v1/mylibrary/bookshelves",info).then(response => response.json());
-            /* ?key=AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4  */
+            
             console.log("Chamou API")
             console.log(data);
 
-          /* }) */
+          }) 
           
         }
     },
