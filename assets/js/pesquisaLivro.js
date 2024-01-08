@@ -1,5 +1,17 @@
 const key = "AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4";
 
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+      vars[key] = value;
+    });
+    return vars;
+  }
+  
+  // Você pode usar essa função para obter o valor do parâmetro, por exemplo:
+  var variavel = getUrlVars()["chaveAcesso"];
+  alert(variavel);
+
 async function loadData(){
 
     var name = document.getElementById("titulo").value;

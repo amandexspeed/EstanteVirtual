@@ -1,3 +1,5 @@
+var chaveAcesso = 100;
+
 function loadingTheme(){
 
     let lightMode = window.matchMedia ("(prefers-color-scheme: light)");
@@ -9,5 +11,11 @@ function loadingTheme(){
         theme.classList.add('light');
     
     }
+
+}
+
+var passaValor = function (pagina) {
+
+    window.location = `${pagina}?chaveAcesso=${chaveAcesso}`;
 
 }
