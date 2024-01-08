@@ -1,4 +1,5 @@
 var chaveAcesso = 0;
+const apiKey = "AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4"
 
 function loadingTheme(){
 

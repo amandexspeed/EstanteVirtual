@@ -123,9 +123,21 @@ async function loadData(){
 
             var pFav = document.createElement("p");
             pFav.textContent= "Adicionar aos favoritos";
-            pFav.setAttribute("class","pTítulo");
+            pFav.setAttribute("class","pFav");
             pFav.addEventListener("click",e=>{
 
+                fetch(`https://www.googleapis.com/books/v1/mylibrary/bookshelves/0/addVolume?volumeId=NRWlitmahXkC&key=${apiKey}`,{
+
+                method:"POST",
+                headers:{
+
+                    "Authorization": `Bearer ${chaveAcesso}`,
+                    "Content-Type": 'application/json',
+
+                },
+                
+
+                }).then(alert("Adicionado"));
                 
 
             });
