@@ -10,7 +10,10 @@ const client = google.accounts.oauth2.initTokenClient({
           console.log("Entrou");
 
             data = fetch(`https://www.googleapis.com/books/v1/mylibrary/bookshelves?key=AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4&access_token=${tokenResponse.access_token}`).then(response => response.json());
-            console.log(data);       
+            console.log(data); 
+            console.log(data.promiseResults)
+            
+            
         }
     },
   });

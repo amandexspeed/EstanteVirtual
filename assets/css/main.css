@@ -2,7 +2,7 @@
 
     padding: 0;
     margin: 0;
-
+    font-family: 'Roboto', sans-serif;
 }
 
 body{
@@ -118,7 +118,9 @@ body{
     font-weight: normal;
   }
   span.icon {
-    background: url('/identity/sign-in/g-normal.png') transparent 5px 50% no-repeat;
+    background-image: url('https://cdn-icons-png.flaticon.com/128/300/300221.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     display: inline-block;
     vertical-align: middle;
     width: 42px;
@@ -131,16 +133,16 @@ body{
     padding-right: 42px;
     font-size: 14px;
     font-weight: bold;
-    font-family: 'Roboto', sans-serif;
+    
 
     /* Use the Roboto font that is loaded in the <head> */
     
   }
 
-  #btnApg{
+  #BtnApg{
 
-   display: none;
-    
+    border: none;
+    background: none;    
 
   }
 

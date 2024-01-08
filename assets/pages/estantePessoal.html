@@ -26,17 +26,21 @@
 
         <div id="gSignInWrapper">
             <span class="label">Logue para continuar:</span>
-            <div id="customBtn" class="customGPlusSignIn">
+            <button type="button" id="BtnApg" ></button>
+                <div id="customBtn" onclick="client.requestAccessToken()" class="customGPlusSignIn">
 
-                <span class="icon"></span>
-                <button type="button" id="BtnApg" onclick="client.requestAccessToken()"><span class="buttonText">Google</span></button>
+                    <span class="icon"></span>
+                    <span class="buttonText">Google</span>
 
-             </div>
+                </div>
         </div>
+    </button>
         
     </div>
 
     <div class="resultado">
+
+        <select name="estantes" id="opc"></select>
 
         <ol id="lista"></ol>
 
