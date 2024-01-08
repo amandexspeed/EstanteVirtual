@@ -1,6 +1,6 @@
 const key = "AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4";
 
-function getUrlVars() {
+/* function getUrlVars() {
     var vars = {};
     var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
       vars[key] = value;
@@ -10,7 +10,7 @@ function getUrlVars() {
   
   // Você pode usar essa função para obter o valor do parâmetro, por exemplo:
   var variavel = getUrlVars()["chaveAcesso"];
-  alert(variavel);
+  alert(variavel); */
 
 async function loadData(){
 
@@ -120,6 +120,17 @@ async function loadData(){
             a.rel="noopener noreferrer"
             a.textContent="Link para informações - Google livros";
             div.appendChild(a);
+
+            var pFav = document.createElement("p");
+            pFav.textContent= "Adicionar aos favoritos";
+            pFav.setAttribute("class","pTítulo");
+            pFav.addEventListener("click",e=>{
+
+                
+
+            });
+
+            div.appendChild(pFav);
 
             li.appendChild(img);
             li.appendChild(div);
