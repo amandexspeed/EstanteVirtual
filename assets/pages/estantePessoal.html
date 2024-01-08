@@ -7,12 +7,16 @@
     <title>Estante virtual</title>
     <script src="../js/script.js" defer></script>
     <script src="../js/estantePessoal.js" defer></script>
-    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+
+    <script src="https://apis.google.com/js/api:client.js"></script>
     <script src="https://accounts.google.com/gsi/client" 
      onload="console.log('TODO: add onload function')">  
      defer
     </script>
 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto:wght@100;300&display=swap');
+    </style>
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body class="theme dark" onload="loadingTheme()">
@@ -20,8 +24,14 @@
     <div class="pesquisa">
         <a href="../../index.html">Tela Inicial</a>
 
-        <div id="my-signin2">
-            <button type="button" onclick="client.requestAccessToken()">Logar com o google</button>
+        <div id="gSignInWrapper">
+            <span class="label">Logue para continuar:</span>
+            <div id="customBtn" class="customGPlusSignIn">
+
+                <span class="icon"></span>
+                <button type="button" id="BtnApg" onclick="client.requestAccessToken()"><span class="buttonText">Google</span></button>
+
+             </div>
         </div>
         
     </div>
