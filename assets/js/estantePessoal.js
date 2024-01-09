@@ -38,20 +38,7 @@ var select = document.getElementById("opc");
     },
   });
  */
-  async function controlFunction(){
 
-    if(chaveAcesso == null){
-
-        await client.requestAccessToken();
-        carregaEstantes();
-
-    }else{
-
-        carregaEstantes();
-
-    }
-
-  }
 
   async function carregaEstantes(){
 

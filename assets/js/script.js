@@ -1,4 +1,4 @@
-var chaveAcesso;
+var chaveAcesso = 0;
 
 const apiKey = "AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4"
 
@@ -46,3 +46,36 @@ const client = google.accounts.oauth2.initTokenClient({
         }
     },
   });
+
+
+  async function controlFunction(){
+
+    console.log(chaveAcesso);
+
+    if(chaveAcesso != 0  && chaveAcesso != undefined){
+
+      carregaEstantes();
+
+    }else{
+
+      async function controlFunction(){
+
+        console.log(chaveAcesso);
+    
+        if(chaveAcesso != undefined ){
+    
+          carregaEstantes();
+    
+        }else{
+    
+        client.requestAccessToken().then(carregaEstantes());
+    
+        }
+    
+          
+    
+      }
+
+    }
+
+  }
