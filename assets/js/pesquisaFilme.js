@@ -95,14 +95,6 @@ async function loadData(){
                 }
             }
 
-            /* var a = document.createElement("a");
-            
-            a.setAttribute("href",data.items[i].volumeInfo.infoLink);
-            a.target='_blank' 
-            a.rel="noopener noreferrer"
-            a.textContent="Link para informações - Google livros";
-            div.appendChild(a); */
-
              li.appendChild(img); 
             li.appendChild(div);
             list.appendChild(li);
@@ -120,3 +112,9 @@ async function loadData(){
     }
 
 }
+
+document.getElementById('titulo').addEventListener('keydown', function(event) {
+    if (event.keyCode === 13) {
+        loadData();
+    }
+});

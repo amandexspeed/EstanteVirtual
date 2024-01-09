@@ -172,7 +172,7 @@ async function adicionaFav(){
 
 }
 
-$('#autor').on('keydown', function(event) {
+document.getElementById('autor').addEventListener('keydown', function(event) {
     if (event.keyCode === 13) {
         loadData();
     }
