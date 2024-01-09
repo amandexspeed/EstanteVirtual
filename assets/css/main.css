@@ -32,7 +32,7 @@ body{
 
     display: flex;
     justify-content: center;
-    height: 20vh;
+    height: 25vh;
     width:85vw;
     align-items: center;
     flex-direction: column;
@@ -47,9 +47,17 @@ body{
 
 }
 
-.pesquisa button{
+.btn{
 
-    padding: 1% 0;
+    padding: 2vw auto;
+    text-align: center;
+
+}
+
+.btn p{
+
+    padding: 2vw auto;
+    text-align: center;
 
 }
 
@@ -62,7 +70,7 @@ body{
 
 .resultado{
  
-    height: 80vh;
+    height: 70vh;
     color: white;
 
 }
