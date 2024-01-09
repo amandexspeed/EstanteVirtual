@@ -13,16 +13,19 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-image: url("https://th.bing.com/th/id/OIG.Fug2qd2KwjqlZ_36rJX0?pid=ImgGn");
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
-.theme.dark{
+/* .theme.dark{
 
     color: white;
     background-color: black;
     
 
-}
+} */
 
 .pesquisa{
 
@@ -208,4 +211,22 @@ body{
         width: 60%;
         font-size: 25px;
     }
+}
+
+.links{
+
+    display: flex;
+    flex-direction: column;
+    background-color:rgba(29,18,24,0.38);
+    width: 50vw;
+}
+
+.links a{
+
+    padding: 10% 5%;
+    margin: 2%;
+    border: 1px solid;
+    text-align: center;
+    color: white;
+
 }
