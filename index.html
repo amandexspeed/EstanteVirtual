@@ -6,10 +6,16 @@
     <title>Estante virtual</title>
     <script src="assets/js/script.js" defer></script>
     <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://apis.google.com/js/api:client.js" defer></script>
+    <script src="https://accounts.google.com/gsi/client" 
+     onload="console.log('TODO: add onload function')">  
+     defer
+    </script>
 </head>
 <body class="theme dark" onload="loadingTheme()">
     
-    <p onclick="passaValor('assets/pages/pesquisaLivro')">Teste q n tem nada a ver com vc</p>
+    <p onclick="passaValor('assets/pages/estantePessoal')">Teste q n tem nada a ver com vc</p>
+    <p onclick="client.requestAccessToken();">Logue pra um .exe diferenciado</p>
 
     <div class="pesquisa">
         <a href="assets/pages/pesquisaLivro.html">Tela pesquisa livros</a>
