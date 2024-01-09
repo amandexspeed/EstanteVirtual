@@ -38,11 +38,12 @@ var select = document.getElementById("opc");
     },
   });
  */
-  function controlFunction(){
+  async function controlFunction(){
 
     if(chaveAcesso == null){
 
-        client.requestAccessToken().then(carregaEstantes);
+        await client.requestAccessToken();
+        carregaEstantes();
 
     }else{
 
