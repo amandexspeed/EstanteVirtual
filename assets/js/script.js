@@ -1,4 +1,5 @@
-var chaveAcesso = 0;
+var chaveAcesso;
+
 const apiKey = "AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4"
 
 function loadingTheme(){
@@ -13,6 +14,17 @@ function loadingTheme(){
     }
 
 }
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+      vars[key] = value;
+    });
+    return vars;
+  }
+
+  var variavel = getUrlVars()["chaveAcesso"];
+  alert(variavel);
 
 var passaValor = function (pagina) {
 
