@@ -35,18 +35,27 @@ body{
     width:85vw;
     align-items: center;
     flex-direction: column;
+    margin: 1%;
     
 }
 
 .pesquisa input{
 
-    margin: 1% 0;
+    margin: 0.5% 0;
 
+}
+
+.pesquisa a{
+
+    margin: 1% 0;
+    padding: 0.5%;
+    border: 1px solid;
 }
 
 .resultado{
  
     height: 80vh;
+    
 
 }
 
@@ -217,16 +226,16 @@ body{
 
     display: flex;
     flex-direction: column;
-    background-color:rgba(29,18,24,0.38);
     width: 50vw;
 }
 
 .links a{
-
+    background-color:rgba(18, 32, 78, 0.38);
     padding: 10% 5%;
     margin: 2%;
     border: 1px solid;
     text-align: center;
-    color: white;
+    font-size: 24px;
+    font-weight: bold;
 
 }
