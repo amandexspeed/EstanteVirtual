@@ -26,7 +26,6 @@ function getUrlVars() {
   chaveAcesso = getUrlVars()["chA"];
 
 var passaValor = function (pagina) {
-
     
     window.location = `${pagina}.html?chA=${chaveAcesso}`;
 
@@ -51,31 +50,8 @@ const client = google.accounts.oauth2.initTokenClient({
   async function controlFunction(){
 
     console.log(chaveAcesso);
+    carregaEstantes();
 
-    if(chaveAcesso != 0  && chaveAcesso != undefined){
-
-      carregaEstantes();
-
-    }else{
-
-      async function controlFunction(){
-
-        console.log(chaveAcesso);
-    
-        if(chaveAcesso != undefined ){
-    
-          carregaEstantes();
-    
-        }else{
-    
-        client.requestAccessToken().then(carregaEstantes());
-    
-        }
-    
-          
-    
-      }
-
-    }
-
+       
   }
+

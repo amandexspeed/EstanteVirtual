@@ -42,7 +42,14 @@ var select = document.getElementById("opc");
 
   async function carregaEstantes(){
 
-    data = await fetch(`https://www.googleapis.com/books/v1/mylibrary/bookshelves?key=AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4&access_token=${chaveAcesso}`).then(response => response.json());
+            if(chaveAcesso == null){
+
+              console.log("entrou!");
+              client.client.requestAccessToken()
+
+            }
+
+            data = await fetch(`https://www.googleapis.com/books/v1/mylibrary/bookshelves?key=AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4&access_token=${chaveAcesso}`).then(response => response.json());
             console.log(data); 
 
             data.items.forEach(e => {
