@@ -124,20 +124,33 @@ async function loadData(){
             var pFav = document.createElement("p");
             pFav.textContent= "Adicionar aos favoritos";
             pFav.setAttribute("class","pFav");
+            pFav.setAttribute("id",i);
             pFav.addEventListener("click",e=>{
 
-                fetch(`https://www.googleapis.com/books/v1/mylibrary/bookshelves/0/addVolume?volumeId=NRWlitmahXkC&key=${apiKey}`,{
+                const client = google.accounts.oauth2.initTokenClient({
+                    client_id: '380330172484-a5l4ppmvnvlq48d7cumdmep189s7sv6g.apps.googleusercontent.com',
+                    scope: 'https://www.googleapis.com/auth/books',
+                    callback: async (tokenResponse) => {
+                        console.log("Entrou!")
+                        console.log(tokenResponse)
+                        console.log(tokenResponse.access_token);
+                        if (tokenResponse!=null && tokenResponse.access_token!=null) {
+                          
+                          chaveAcesso = tokenResponse.access_token;
+                          await fetch(`https://www.googleapis.com/books/v1/mylibrary/bookshelves/0/addVolume?volumeId=${data.items[e.target.id].accessInfo.id}&key=${apiKey}&access_token=${chaveAcesso}`,{
 
-                method:"POST",
-                headers:{
+                            method:"POST"
 
-                    "Authorization": `Bearer ${chaveAcesso}`,
-                    "Content-Type": 'application/json',
+                           }).then(alert("Adicionado"));
+                            
+                            
+                        }
+                    },
+                  });
 
-                },
+                  client.requestAccessToken();
+
                 
-
-                }).then(alert("Adicionado"));
                 
 
             });
