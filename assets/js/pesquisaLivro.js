@@ -125,7 +125,7 @@ async function loadData(){
             pFav.textContent= "Adicionar aos favoritos";
             pFav.setAttribute("class","pFav");
             pFav.setAttribute("id",i);
-            pFav.addEventListener("click",e=>{
+            pFav.addEventListener("click",async e=>{
 
                 if(chaveAcesso == null){
 
@@ -133,7 +133,11 @@ async function loadData(){
             
                 }else{
             
-                    carregaEstantes();
+                    await fetch(`https://www.googleapis.com/books/v1/mylibrary/bookshelves/0/addVolume?volumeId=${data.items[e.target.id].id}&key=${apiKey}&access_token=${chaveAcesso}`,{
+
+                            method:"POST"
+
+                    }).then(alert("Adicionado"));
             
                 }
                 

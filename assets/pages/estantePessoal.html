@@ -19,16 +19,14 @@
     </style>
     <link rel="stylesheet" href="../css/main.css">
 </head>
-<body class="theme dark" onload="loadingTheme()">
+<body class="theme dark" onload="carregaEstantes()">
     
     <div class="pesquisa">
-        <a href="../../index.html">Tela Inicial</a>
+        <a onclick="passaValor('../../index')">Tela Inicial</a>
 
-        <p onclick="passaValor('pesquisaLivro')">Teste q n tem nada a ver com vc</p>
-
-        <div id="gSignInWrapper">
+        <!-- <div id="gSignInWrapper">
             <span class="label">Logue para continuar:</span>
-                <div id="customBtn" onclick="carregaEstantes()" class="customGPlusSignIn">
+                <div id="customBtn" onclick="" class="customGPlusSignIn">
 
                     <span class="icon"></span>
                     <span class="buttonText">Google</span>
@@ -36,7 +34,8 @@
 
                 </div>
         </div>
-
+ -->
+        
         <select name="estantes" id="opc">
 
 

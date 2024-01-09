@@ -1,4 +1,4 @@
-var chaveAcesso = 0;
+var chaveAcesso;
 
 const apiKey = "AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4"
 
@@ -46,4 +46,13 @@ const client = google.accounts.oauth2.initTokenClient({
     },
   });
 
-function controlFunctio
+function controlFunction(){
+
+  if(chaveAcesso===undefined){
+
+    client.requestAccessToken()
+
+  }
+
+
+}

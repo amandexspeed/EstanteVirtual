@@ -15,17 +15,14 @@
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto:wght@100;300&display=swap');
     </style>
 </head>
-<body class="theme dark" onload="client.requestAccessToken()">
-    
-    <p onclick="passaValor('assets/pages/estantePessoal')">Teste q n tem nada a ver com vc</p>
-    <p onclick="client.requestAccessToken();">Logue pra um .exe diferenciado</p>
+<body class="theme dark" onload="controlFunction()">
 
     <div class="pesquisa">
-        <a href="assets/pages/pesquisaLivro.html">Tela pesquisa livros</a>
+        <a onclick="passaValor('assets/pages/pesquisaLivro')">Tela pesquisa livros</a>
 
-        <a href="assets/pages/pesquisaFilmes.html">Tela pesquisa filmes</a>
+        <a onclick="passaValor('assets/pages/pesquisaFilmes')">Tela pesquisa filmes</a>
 
-        <a href="assets/pages/estantePessoal.html">Tela estante livros</a>
+        <a onclick="passaValor('assets/pages/estantePessoal')">Tela estante livros</a>
     </div>
 
     <div class="resultado">
