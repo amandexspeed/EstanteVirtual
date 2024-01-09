@@ -46,12 +46,4 @@ const client = google.accounts.oauth2.initTokenClient({
     },
   });
 
-
-  async function controlFunction(){
-
-    console.log(chaveAcesso);
-    carregaEstantes();
-
-       
-  }
-
+function controlFunctio
