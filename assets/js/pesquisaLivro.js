@@ -38,7 +38,7 @@ async function loadData(){
 
         for (var i=0;i<data.items.length;i++){
 
-            console.log(data.items[i].volumeInfo);
+            console.log(data.items[i].id);
 
             var li = document.createElement("li");
 
@@ -137,7 +137,7 @@ async function loadData(){
                         if (tokenResponse!=null && tokenResponse.access_token!=null) {
                           
                           chaveAcesso = tokenResponse.access_token;
-                          await fetch(`https://www.googleapis.com/books/v1/mylibrary/bookshelves/0/addVolume?volumeId=${data.items[e.target.id].accessInfo.id}&key=${apiKey}&access_token=${chaveAcesso}`,{
+                          await fetch(`https://www.googleapis.com/books/v1/mylibrary/bookshelves/0/addVolume?volumeId=${data.items[e.target.id].id}&key=${apiKey}&access_token=${chaveAcesso}`,{
 
                             method:"POST"
 
