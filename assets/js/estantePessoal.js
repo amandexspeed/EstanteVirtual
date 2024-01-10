@@ -76,49 +76,50 @@ async function carregaEstantes(){
               var text = data.items[i].volumeInfo.description;
   
               if(text!=null){
-                  if(text.length>500){
-  
-                   var textSlice = text.slice(0,500);
-                   pDesc.textContent = textSlice + "...";
-                   var pInfo = document.createElement("p");
-                   pInfo.textContent="Ler descrição completa"
-                   pInfo.setAttribute("class","info menos");
-                   pInfo.setAttribute("id",i);
-  
-                   pInfo.addEventListener("click",e=>{
-  
-                   const div = e.target.parentElement;
-                   const pDesc = div.querySelector(".pDescr");   
-                   
-                     if(e.target.classList.contains("menos")){
-  
-                          e.target.textContent ="Menos informações";
-                          pDesc.textContent = data.items[e.target.id].volumeInfo.description;
-  
-                      }else{
-  
-                          e.target.textContent="Ler descrição completa";
-                          var text= data.items[e.target.id].volumeInfo.description;
-                          text = text.slice(0,500);
-                          pDesc.textContent = text + "...";
-  
-                      }
-  
-                      e.target.classList.toggle("menos");
-                      e.target.classList.toggle("mais");
-   
-                   });
-  
-                   div.appendChild(pDesc);
-                   div.appendChild(pInfo);
-                   
-                  }else{
-  
-                      pDesc.textContent=text;
-                      div.appendChild(pDesc);
-  
-                  }
-              }
+                if(text.length>500){
+
+                 var textSlice = text.slice(0,500);
+                 pDesc.textContent = textSlice + "...";
+                 
+                 var pInfo = document.createElement("p");
+                 pInfo.textContent="Ler descrição completa"
+                 pInfo.setAttribute("class","info menos");
+                 pInfo.setAttribute("id",i);
+
+                 pInfo.addEventListener("click",e=>{
+
+                 const div = e.target.parentElement;
+                 const pDesc = div.querySelector(".pDescr");   
+                 
+                   if(e.target.classList.contains("menos")){
+
+                        e.target.textContent ="Menos informações";
+                        pDesc.textContent = data.items[e.target.id].volumeInfo.description;;
+
+                    }else{
+
+                        e.target.textContent="Ler descrição completa";
+                        var text= data.items[e.target.id].volumeInfo.description;
+                        text = text.slice(0,500);
+                        pDesc.textContent = text + "...";
+
+                    }
+
+                    e.target.classList.toggle("menos");
+                    e.target.classList.toggle("mais");
+ 
+                 });
+
+                 div.appendChild(pDesc);
+                 div.appendChild(pInfo);
+                 
+                }else{
+
+                    pDesc.textContent=text;
+                    div.appendChild(pDesc);
+
+                }
+            }
   
               var a = document.createElement("a");
               
