@@ -93,7 +93,7 @@ async function carregaEstantes(){
                      if(e.target.classList.contains("menos")){
   
                           e.target.textContent ="Menos informações";
-                          pDesc.textContent = data.items[e.target.id].volumeInfo.description;;
+                          pDesc.textContent = data.items[e.target.id].volumeInfo.description;
   
                       }else{
   
