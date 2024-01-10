@@ -126,20 +126,13 @@ async function loadData(){
             pFav.setAttribute("class","pFav");
             pFav.setAttribute("id",i);
             pFav.addEventListener("click",async e=>{
-
-                if(chaveAcesso == null){
-
-                    client.requestAccessToken().then(adicionaFav);
-            
-                }else{
-            
+                
                     await fetch(`https://www.googleapis.com/books/v1/mylibrary/bookshelves/0/addVolume?volumeId=${data.items[e.target.id].id}&key=${apiKey}&access_token=${chaveAcesso}`,{
 
                             method:"POST"
 
                     }).then(alert("Adicionado"));
             
-                }
                 
             });
 
@@ -160,16 +153,6 @@ async function loadData(){
         list.style.listStyle="none";
 
     }
-}
-
-async function adicionaFav(){
-
-    await fetch(`https://www.googleapis.com/books/v1/mylibrary/bookshelves/0/addVolume?volumeId=${data.items[e.target.id].id}&key=${apiKey}&access_token=${chaveAcesso}`,{
-
-                            method:"POST"
-
-                           }).then(alert("Adicionado"));
-
 }
 
 document.getElementById('autor').addEventListener('keydown', function(event) {

@@ -166,6 +166,27 @@ var select = document.getElementById("opc");
               a.rel="noopener noreferrer"
               a.textContent="Link para informações - Google livros";
               div.appendChild(a);
+
+              var pEst = document.createElement("p");
+              pEst.textContent= "Remover da estante";
+              pEst.setAttribute("class","pEst");
+              pEst.setAttribute("id",i);
+              var parent = p.parentElement;
+              console.log(parent);
+              pEst.addEventListener("click",async e=>{
+                  
+                      await fetch(`https://www.googleapis.com/books/v1/mylibrary/bookshelves/${select.value}/removeVolume?volumeId=${data.items[e.target.id].id}&key=${apiKey}&access_token=${chaveAcesso}`,{
+
+                              method:"POST"
+
+                      }).then(alert("Removido"));
+
+                      var parent = e.target.parentElement;
+                      console.log(parent);
+              
+                  
+              });
+              div.appendChild(pEst);
   
               li.appendChild(img);
               li.appendChild(div);
