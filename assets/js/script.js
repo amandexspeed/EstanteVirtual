@@ -48,9 +48,9 @@ const client = google.accounts.oauth2.initTokenClient({
 
 function controlFunction(){
 
-  if(chaveAcesso===undefined){
+  if(chaveAcesso===undefined || chaveAcesso=="undefined"){
 
-    client.requestAccessToken();
+    client.requestAccessToken()
     contentControl();
 
   }else{
@@ -86,8 +86,8 @@ function contentControl(){
 
   if(chaveAcesso!=undefined){
 
-    console.log()
-    document.querySelector(".deslogar").classList.toggle("load");
+    console.log(document.querySelectorAll(".p"))
+    document.querySelectorAll(".p").forEach((e)=>e.classList.toggle("load"));
 
   }
 
