@@ -61,7 +61,7 @@ async function loadData(){
 
     console.log(data.totalItems)
 
-    if(data.totalItems>0 &&){
+    if(data.totalItems>0 && data != undefined){
 
         for (var i=0;i<data.items.length;i++){
 
