@@ -20,8 +20,35 @@ async function loadData(){
     console.log(name);
     console.log(author)
 
-    var data = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${name}+inauthor:${author}&key=${key}`).then(Response=>Response.json());
+    var data ;
+    
+    if(name!=null && author!=null){
 
+        data = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${name}+inauthor:${author}&key=${key}`).then(Response=>Response.json());
+    
+    }else{
+
+        if(name!=null){
+
+            data = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${name}&key=${key}`).then(Response=>Response.json());
+        
+        }else{
+
+            if(author!=null){
+
+                data = await fetch(`https://www.googleapis.com/books/v1/volumes?q=inauthor:${author}&key=${key}`).then(Response=>Response.json());
+
+            }else{
+
+                alert("Digite ou o nome do autor ou do livro");
+
+            }
+
+
+        }
+
+
+    }
     console.log(data);
 
     var list = document.getElementById("lista");
@@ -34,7 +61,7 @@ async function loadData(){
 
     console.log(data.totalItems)
 
-    if(data.totalItems>0){
+    if(data.totalItems>0 &&){
 
         for (var i=0;i<data.items.length;i++){
 

@@ -74,21 +74,21 @@ async function carregaEstantes(){
               var pDesc = document.createElement("p");
               pDesc.setAttribute("class","pDescr");
               var text = data.items[i].volumeInfo.description;
-  
+
+              var pInfo = document.createElement("p");
+
               if(text!=null){
+
                 if(text.length>500){
 
                  var textSlice = text.slice(0,500);
                  pDesc.textContent = textSlice + "...";
                  div.appendChild(pDesc);
 
-                 var pInfo = document.createElement("p");
                  pInfo.textContent="Ler descrição completa";
                  pInfo.setAttribute("class","info menos");
                  pInfo.setAttribute("id",i);
-                 console.log("Entrou aqui!");
-                 console.log(pInfo);
-                 div.appendChild(pInfo);
+                 
 
                  pInfo.addEventListener("click",e=>{
                  const div = e.target.parentElement;
@@ -110,8 +110,10 @@ async function carregaEstantes(){
 
                     e.target.classList.toggle("menos");
                     e.target.classList.toggle("mais");
- 
+
                  });
+
+                 div.appendChild(pInfo);
                  
                 }else{
 
