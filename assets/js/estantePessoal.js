@@ -80,14 +80,17 @@ async function carregaEstantes(){
 
                  var textSlice = text.slice(0,500);
                  pDesc.textContent = textSlice + "...";
+                 div.appendChild(pDesc);
 
                  var pInfo = document.createElement("p");
-                 pInfo.textContent="Ler descrição completa"
+                 pInfo.textContent="Ler descrição completa";
                  pInfo.setAttribute("class","info menos");
                  pInfo.setAttribute("id",i);
+                 console.log("Entrou aqui!");
+                 console.log(pInfo);
+                 div.appendChild(pInfo);
 
                  pInfo.addEventListener("click",e=>{
-
                  const div = e.target.parentElement;
                  const pDesc = div.querySelector(".pDescr");   
                  
@@ -109,9 +112,6 @@ async function carregaEstantes(){
                     e.target.classList.toggle("mais");
  
                  });
-
-                 div.appendChild(pDesc);
-                 div.appendChild(pInfo);
                  
                 }else{
 
@@ -121,6 +121,7 @@ async function carregaEstantes(){
                 }
             
               }
+
               var a = document.createElement("a");
               
               a.setAttribute("href",data.items[i].volumeInfo.infoLink);
