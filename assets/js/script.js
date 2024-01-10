@@ -63,11 +63,22 @@ async function deslogar(){
 
       await fetch(`https://oauth2.googleapis.com/revoke?token=${chaveAcesso}`,{
 
-                              method:"POST"
+          method:"POST"
 
-                      }).then(alert("Removido"));
+      }).then();
+
+      
 
     }
 
 
+}
+
+
+function testaPosição(){
+
+  var vars = {},
+  var pos = window.location.href.replace(/.+?(?=([^&]*()))/gi,(key,value){
+  vars[key] = value;
+  }
 }
