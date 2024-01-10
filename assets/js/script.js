@@ -56,3 +56,18 @@ function controlFunction(){
 
 
 }
+
+async function deslogar(){
+
+    if(chaveAcesso!=undefined){
+
+      await fetch(`https://oauth2.googleapis.com/revoke?token=${chaveAcesso}`,{
+
+                              method:"POST"
+
+                      }).then(alert("Removido"));
+
+    }
+
+
+}

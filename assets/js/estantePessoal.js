@@ -1,68 +1,29 @@
 var select = document.getElementById("opc");
 
-/* const client = google.accounts.oauth2.initTokenClient({
-    client_id: '380330172484-a5l4ppmvnvlq48d7cumdmep189s7sv6g.apps.googleusercontent.com',
-    scope: 'https://www.googleapis.com/auth/books',
-    callback: async (tokenResponse) => {
-        console.log("Entrou!")
-        console.log(tokenResponse)
-        console.log(tokenResponse.access_token);
-        if (tokenResponse!=null && tokenResponse.access_token!=null) {
-          
-          chaveAcesso = tokenResponse.access_token;
-          console.log("Entrou");
+async function carregaEstantes(){
 
-            data = await fetch(`https://www.googleapis.com/books/v1/mylibrary/bookshelves?key=AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4&access_token=${chaveAcesso}`).then(response => response.json());
-            console.log(data); 
+          data = await fetch(`https://www.googleapis.com/books/v1/mylibrary/bookshelves?key=AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4&access_token=${chaveAcesso}`).then(response => response.json());
+          console.log(data); 
 
-            data.items.forEach(e => {
-              
-              console.log(e)
-              var opc = document.createElement("option");
-              opc.text = e.title;
-              opc.value = e.id
-              select.appendChild(opc);
+          data.items.forEach(e => {
+            
+            console.log(e)
+            var opc = document.createElement("option");
+            opc.text = e.title;
+            opc.value = e.id
+            select.appendChild(opc);
 
-            });
+          });
+
+          LerEstante();
+
+          select.addEventListener("change",async e=>{
 
             LerEstante();
 
-            select.addEventListener("change",async e=>{
+          })
 
-              LerEstante();
-
-            })
-            
-            
-        }
-    },
-  });
- */
-
-
-  async function carregaEstantes(){
-
-            data = await fetch(`https://www.googleapis.com/books/v1/mylibrary/bookshelves?key=AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4&access_token=${chaveAcesso}`).then(response => response.json());
-            console.log(data); 
-
-            data.items.forEach(e => {
-              
-              console.log(e)
-              var opc = document.createElement("option");
-              opc.text = e.title;
-              opc.value = e.id
-              select.appendChild(opc);
-
-            });
-
-            LerEstante();
-
-            select.addEventListener("change",async e=>{
-
-              LerEstante();
-
-            })
-          }
+      }
 
   
 
@@ -171,8 +132,6 @@ var select = document.getElementById("opc");
               pEst.textContent= "Remover da estante";
               pEst.setAttribute("class","pEst");
               pEst.setAttribute("id",i);
-              var parent = p.parentElement;
-              console.log(parent);
               pEst.addEventListener("click",async e=>{
                   
                       await fetch(`https://www.googleapis.com/books/v1/mylibrary/bookshelves/${select.value}/removeVolume?volumeId=${data.items[e.target.id].id}&key=${apiKey}&access_token=${chaveAcesso}`,{
@@ -181,9 +140,8 @@ var select = document.getElementById("opc");
 
                       }).then(alert("Removido"));
 
-                      var parent = e.target.parentElement;
-                      console.log(parent);
-              
+                      var parent = e.target.parentElement.parentElement;
+                      list.removeChild(parent);
                   
               });
               div.appendChild(pEst);
