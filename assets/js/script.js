@@ -77,8 +77,13 @@ async function deslogar(){
 
 function testaPosição(){
 
-  var vars = {},
-  var pos = window.location.href.replace(/.+?(?=([^&]*()))/gi,(key,value){
-  vars[key] = value;
-  }
+  var pos = window.location.href.replace(/&?(?=([^&]*()))/gi,function(key){
+    return key;
+  })
+
+  console.log(pos)
+
+  
+  
+  
 }
