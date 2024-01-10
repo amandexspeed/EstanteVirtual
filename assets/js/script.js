@@ -57,7 +57,7 @@ function controlFunction(){
 
 }
 
-async function deslogar(){
+async function deslogar(pasta){
 
     if(chaveAcesso!=undefined){
 
@@ -65,25 +65,14 @@ async function deslogar(){
 
           method:"POST"
 
-      }).then();
+      }).then(function decide(pasta){
+        
+        if(pasta){window.location = `../../index.html`
+        }else{window.location = `index.html`}});
 
       
 
     }
 
 
-}
-
-
-function testaPosição(){
-
-  var pos = window.location.href.replace(/&?(?=([^&]*()))/gi,function(key){
-    return key;
-  })
-
-  console.log(pos)
-
-  
-  
-  
 }
