@@ -73,6 +73,7 @@ async function loadData(){
 
                  var textSlice = text.slice(0,500);
                  pDesc.textContent = textSlice + "...";
+                 
                  var pInfo = document.createElement("p");
                  pInfo.textContent="Ler descrição completa"
                  pInfo.setAttribute("class","info menos");

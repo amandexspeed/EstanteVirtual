@@ -40,7 +40,7 @@ async function carregaEstantes(){
   
       }
   
-      console.log(data.totalItems)
+      console.log(data.totalItems);
   
       if(data.totalItems>0){
   
@@ -80,7 +80,7 @@ async function carregaEstantes(){
 
                  var textSlice = text.slice(0,500);
                  pDesc.textContent = textSlice + "...";
-                 
+
                  var pInfo = document.createElement("p");
                  pInfo.textContent="Ler descrição completa"
                  pInfo.setAttribute("class","info menos");
@@ -119,8 +119,8 @@ async function carregaEstantes(){
                     div.appendChild(pDesc);
 
                 }
-            }
-  
+            
+              }
               var a = document.createElement("a");
               
               a.setAttribute("href",data.items[i].volumeInfo.infoLink);
@@ -154,16 +154,15 @@ async function carregaEstantes(){
   
           } 
   
-      }else{
-  
-          var li = document.createElement("li");
-          li.textContent="A estante está vazia";
-          list.appendChild(li);
-          list.style.listStyle="none";
-  
-      }
+        }else{
+    
+      var li = document.createElement("li");
+      li.textContent="A estante está vazia";
+      list.appendChild(li);
+      list.style.listStyle="none";
 
   }
+}
 
 
   
