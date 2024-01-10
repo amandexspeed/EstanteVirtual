@@ -286,3 +286,15 @@ body{
     padding: 1%;
 
 }
+
+.deslogar p{
+
+    display: none;
+
+}
+
+.deslogar .load{
+
+    display: block;
+
+}

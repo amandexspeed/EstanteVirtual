@@ -16,9 +16,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
     </style>
 </head>
-<body class="theme dark" onload="controlFunction()">
+<body onload="controlFunction()">
 
-    <div class="deslogar"><p onclick="(deslogar(false))">Deslogar</p></div>
+    <div class="deslogar" onload="contentControl()"><p onclick="(deslogar(false))">Deslogar</p><p class="load" onclick="(client.requestAccessToken())">Logue na conta do google</p></div>
 
     <div class="links">
         

@@ -50,7 +50,12 @@ function controlFunction(){
 
   if(chaveAcesso===undefined){
 
-    client.requestAccessToken()
+    client.requestAccessToken();
+    contentControl();
+
+  }else{
+
+    contentControl();
 
   }
 
@@ -74,5 +79,16 @@ async function deslogar(pasta){
 
     }
 
+
+}
+
+function contentControl(){
+
+  if(chaveAcesso!=undefined){
+
+    console.log()
+    document.querySelector(".deslogar").classList.toggle("load");
+
+  }
 
 }
