@@ -6,7 +6,6 @@ async function loadData(){
     var list = document.getElementById("lista");
 
     var data = await fetch(`https://api.themoviedb.org/3/search/movie?query=${name}&language=pt-BR&api_key=${key}`).then(Response=>Response.json());
-    console.log(data)
 
     while (list.firstChild) {
 
@@ -14,13 +13,10 @@ async function loadData(){
 
     }
 
-    console.log(data.results)
-
     if(data.total_results>0){
 
         for (var i=0;i<data.results.length;i++){
 
-            console.log(data.results[i].original_title);
             var li = document.createElement("li");
 
            var img = document.createElement("img");

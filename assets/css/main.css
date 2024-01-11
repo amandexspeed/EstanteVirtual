@@ -187,10 +187,10 @@ body{
   #customBtn:hover {
     cursor: pointer;
   }
-  span.label {
+/*   span.label {
     font-family: serif;
     font-weight: normal;
-  }
+  } */
 
   span.icon {
     background-image: url('https://cdn-icons-png.flaticon.com/128/300/300221.png');
@@ -208,6 +208,7 @@ body{
     padding-right: 42px;
     font-size: 14px;
     font-weight: bold;
+    text-shadow: none;
     
 
     /* Use the Roboto font that is loaded in the <head> */

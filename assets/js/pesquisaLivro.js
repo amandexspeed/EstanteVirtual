@@ -33,7 +33,6 @@ async function loadData(){
 
 
     }
-    console.log(data);
 
     var list = document.getElementById("lista");
 
@@ -43,13 +42,9 @@ async function loadData(){
 
     }
 
-    console.log(data.totalItems)
-
     if(data.totalItems>0 && data != undefined){
 
         for (var i=0;i<data.items.length;i++){
-
-            console.log(data.items[i].id);
 
             var li = document.createElement("li");
 
