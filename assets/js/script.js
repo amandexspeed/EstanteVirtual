@@ -44,12 +44,13 @@ const client = google.accounts.oauth2.initTokenClient({
     },
   });
 
-function controlFunction(){
+async function controlFunction(){
 
   if(chaveAcesso===undefined || chaveAcesso=="undefined"){
 
     client.requestAccessToken()
-    contentControl();
+    document.querySelectorAll(".p").forEach((e)=>e.classList.toggle("load"));
+    
 
   }else{
 
@@ -83,7 +84,7 @@ async function deslogar(pasta){
 function contentControl(){
 
   if(chaveAcesso!=undefined){
-    
+
     document.querySelectorAll(".p").forEach((e)=>e.classList.toggle("load"));
 
   }
