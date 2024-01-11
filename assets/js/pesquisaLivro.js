@@ -22,19 +22,19 @@ async function loadData(){
 
     var data ;
     
-    if(name!=null && author!=null){
+    if(name!="" && author!=""){
 
-        data = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${name}+inauthor:${author}&key=${key}`).then(Response=>Response.json());
+        data = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${name}+inauthor:${author}&key=${key}`).then(Response=>Response.json());
     
     }else{
 
-        if(name!=null){
+        if(name!=""){
 
-            data = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${name}&key=${key}`).then(Response=>Response.json());
+            data = await fetch(`https://www.googleapis.com/books/v1/volumes?q=intitle:${name}&key=${key}`).then(Response=>Response.json());
         
         }else{
 
-            if(author!=null){
+            if(author!=""){
 
                 data = await fetch(`https://www.googleapis.com/books/v1/volumes?q=inauthor:${author}&key=${key}`).then(Response=>Response.json());
 
