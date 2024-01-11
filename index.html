@@ -18,7 +18,18 @@
 </head>
 <body onload="controlFunction()">
 
-    <div class="deslogar" onload="contentControl()"><p class="p" onclick="(deslogar(false))">Deslogar</p><p class="p load" onclick="(client.requestAccessToken())">Logue na conta do google</p></div>
+    <div class="deslogar" onload="contentControl()">
+        <div class="p load" id="gSignInWrapper">
+        <span class="label">Logue para continuar:</span>
+            <div id="customBtn" onclick="(client.requestAccessToken())" class="customGPlusSignIn">
+
+                <span class="icon"></span>
+                <span class="buttonText">Google</span>
+                
+
+            </div>
+        </div>
+        <p class="p" onclick="(deslogar(false))">Deslogar</p><!-- <p class="p load" onclick="(client.requestAccessToken())">Logue na conta do google</p> --></div>
 
     <div class="links">
         
