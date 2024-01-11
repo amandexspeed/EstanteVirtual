@@ -1,25 +1,9 @@
 const key = "AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4";
 
-/* function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-      vars[key] = value;
-    });
-    return vars;
-  }
-  
-  // Você pode usar essa função para obter o valor do parâmetro, por exemplo:
-  var variavel = getUrlVars()["chaveAcesso"];
-  alert(variavel); */
-
 async function loadData(){
 
     var name = document.getElementById("titulo").value;
     var author = document.getElementById("autor").value;
-
-    console.log(name);
-    console.log(author)
-
     var data ;
     
     if(name!="" && author!=""){
@@ -71,7 +55,6 @@ async function loadData(){
 
             var img = document.createElement("img");
 
-            /* if(data.items[i].volumeInfo.readingModes.image){ */ 
             if(data.items[i].volumeInfo.imageLinks!=null){ 
                 
                 img.src = data.items[i].volumeInfo.imageLinks.thumbnail;
@@ -184,6 +167,12 @@ async function loadData(){
 }
 
 document.getElementById('autor').addEventListener('keydown', function(event) {
+    if (event.keyCode === 13) {
+        loadData();
+    }
+});
+
+document.getElementById('titulo').addEventListener('keydown', function(event) {
     if (event.keyCode === 13) {
         loadData();
     }
