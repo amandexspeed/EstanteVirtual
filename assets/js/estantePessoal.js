@@ -3,11 +3,8 @@ var select = document.getElementById("opc");
 async function carregaEstantes(){
 
           data = await fetch(`https://www.googleapis.com/books/v1/mylibrary/bookshelves?key=AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4&access_token=${chaveAcesso}`).then(response => response.json());
-          console.log(data); 
-
           data.items.forEach(e => {
-            
-            console.log(e)
+          
             var opc = document.createElement("option");
             opc.text = e.title;
             opc.value = e.id
@@ -30,8 +27,7 @@ async function carregaEstantes(){
   async function LerEstante(){
 
       data = await fetch(`https://www.googleapis.com/books/v1/mylibrary/bookshelves/${select.value}/volumes?key=AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4&access_token=${chaveAcesso}`).then(response => response.json());
-      console.log(data);
-
+      
       var list = document.getElementById("lista");
 
       while (list.firstChild) {
@@ -40,13 +36,9 @@ async function carregaEstantes(){
   
       }
   
-      console.log(data.totalItems);
-  
       if(data.totalItems>0){
   
           for (var i=0;i<data.items.length;i++){
-  
-              console.log(data.items[i].volumeInfo);
   
               var li = document.createElement("li");
   

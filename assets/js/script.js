@@ -83,8 +83,7 @@ async function deslogar(pasta){
 function contentControl(){
 
   if(chaveAcesso!=undefined){
-
-    console.log(document.querySelectorAll(".p"))
+    
     document.querySelectorAll(".p").forEach((e)=>e.classList.toggle("load"));
 
   }
