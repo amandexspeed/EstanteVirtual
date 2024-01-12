@@ -47,15 +47,15 @@ const client = google.accounts.oauth2.initTokenClient({
   function TestarChave() {
     return new Promise((chaveAcesso)=>{
       
-      chaveAcesso = this.chaveAcesso;
+       this.chaveAcesso;
 
-      if(chaveAcesso===undefined || chaveAcesso=="undefined"){
+      if(this.chaveAcesso===undefined || chaveAcesso=="undefined"){
 
-        return null;
+        chaveAcesso =  false;
 
       }else{
 
-        return
+        chaveAcesso = true
 
       }
 
@@ -65,6 +65,10 @@ const client = google.accounts.oauth2.initTokenClient({
 
 async function controlFunction(){
 
+  var teste = await TestarChave().then(console.log());
+
+  console.log(teste);
+
   if(chaveAcesso===undefined || chaveAcesso=="undefined"){
 
     client.requestAccessToken();
@@ -73,11 +77,9 @@ async function controlFunction(){
 
         contentControl();
         
-    }else{
-
-      setTimeout(controlFunction(),3000);
-
     }
+
+
 
     
 
@@ -113,9 +115,11 @@ async function deslogar(pasta){
 
 function contentControl(){
 
+
   if(chaveAcesso!=undefined){
 
     document.querySelectorAll(".p").forEach((e)=>e.classList.toggle("load"));
   }
 
 }
+
