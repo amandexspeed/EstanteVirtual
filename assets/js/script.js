@@ -44,21 +44,46 @@ const client = google.accounts.oauth2.initTokenClient({
     },
   });
 
+  function TestarChave() {
+    return new Promise((chaveAcesso)=>{
+      
+      chaveAcesso = the
+
+      if(chaveAcesso===undefined || chaveAcesso=="undefined"){
+
+        return null;
+
+      }else{
+
+        return
+
+      }
+
+    });
+  }
+
+
 async function controlFunction(){
 
   if(chaveAcesso===undefined || chaveAcesso=="undefined"){
 
     client.requestAccessToken();
 
-    while(chaveAcesso===undefined || chaveAcesso=="undefined"){
+    if(chaveAcesso!=undefined){
 
-      contentControl();
+        contentControl();
+        
+    }else{
+
+      setTimeout(controlFunction(),3000);
 
     }
+
     
 
   }else{
 
+    
     contentControl();
 
   }
