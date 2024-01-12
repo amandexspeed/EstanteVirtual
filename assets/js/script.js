@@ -69,7 +69,7 @@ async function deslogar(pasta){
 
           method:"POST"
 
-      }).then(function decide(pasta){
+      }).then({
         
         if(pasta){window.location = `../../index.html`
         }else{window.location = `index.html`}});
