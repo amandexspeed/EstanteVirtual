@@ -54,7 +54,27 @@ async function testarChaveAcesso() {
       resolve(chaveAcesso);
     } else {
       // Rejeitar a promise com um erro
-      reject(/* new Error("A variável chave acesso é indefinida" ) */);
+      reject(/* new Error("A variável chave acesso é indefinida" ) */
+        alert("Logue para prosseguir"),
+        client.requestAccessToken()
+      );
+    }
+  });
+}
+
+async function testarChaveAcesso() {
+  // Retornar uma promise que resolve se a variável chave acesso não for indefinida
+  return new Promise((resolve, reject) => {
+    // Verificar se a variável chave acesso existe
+    if (typeof chaveAcesso !== "undefined") {
+      // Resolver a promise com o valor da variável chave acesso
+      resolve(chaveAcesso);
+    } else {
+      // Rejeitar a promise com um erro
+      reject(/* new Error("A variável chave acesso é indefinida" ) */
+        alert("Logue para prosseguir"),
+        client.requestAccessToken()
+      );
     }
   });
 }
@@ -64,28 +84,7 @@ async function testarChaveAcesso() {
 
 async function controlFunction(){
 
-  await testarChaveAcesso().then(contentControl()).catch(function casoErro(){
-    alert("Logue para prosseguir")
-    client.requestAccessToken()
-    controlFunction()
-  })
-
-  /* if(chaveAcesso===undefined || chaveAcesso=="undefined"){
-
-    client.requestAccessToken();
-
-    if(chaveAcesso!=undefined){
-
-        contentControl();
-        
-    }
-
-  }else{
-
-    
-    contentControl();
-
-  } */
+  await testarChaveAcesso().then(contentControl()).catch();
 
 
 }
@@ -119,3 +118,25 @@ async function contentControl(){
 
 }
 
+/* function casoErro(){
+    alert("Logue para prosseguir")
+    client.requestAccessToken()
+    contentControl() ;
+  })*/
+
+  /* if(chaveAcesso===undefined || chaveAcesso=="undefined"){
+
+    client.requestAccessToken();
+
+    if(chaveAcesso!=undefined){
+
+        contentControl();
+        
+    }
+
+  }else{
+
+    
+    contentControl();
+
+  } */
