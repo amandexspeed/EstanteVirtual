@@ -94,7 +94,7 @@ async function deslogar(pasta){
 
           method:"POST"
 
-      }).then(function decide(pasta){
+      }).then({
         
         if(pasta){window.location = `../../index.html`
         }else{client.requestAccessToken()}});
@@ -117,4 +117,7 @@ async function contentControl(){
   }
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 45db023a04082fb95913e3e8365e2d294865fbb2
