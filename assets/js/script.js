@@ -48,8 +48,13 @@ async function controlFunction(){
 
   if(chaveAcesso===undefined || chaveAcesso=="undefined"){
 
-    client.requestAccessToken()
-    document.querySelectorAll(".p").forEach((e)=>e.classList.toggle("load"));
+    client.requestAccessToken();
+
+    while(chaveAcesso===undefined || chaveAcesso=="undefined"){
+
+      contentControl();
+
+    }
     
 
   }else{
@@ -72,7 +77,7 @@ async function deslogar(pasta){
       }).then(function decide(pasta){
         
         if(pasta){window.location = `../../index.html`
-        }else{window.location = `index.html`}});
+        }else{client.requestAccessToken()}});
 
       
 
@@ -86,7 +91,6 @@ function contentControl(){
   if(chaveAcesso!=undefined){
 
     document.querySelectorAll(".p").forEach((e)=>e.classList.toggle("load"));
-
   }
 
 }
