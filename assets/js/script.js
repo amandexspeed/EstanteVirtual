@@ -54,7 +54,11 @@ async function testarChaveAcesso() {
       resolve(chaveAcesso);
     } else {
       // Rejeitar a promise com um erro
-      reject(new Error("A variável chave acesso é indefinida"));
+      reject(/* new Error("A variável chave acesso é indefinida" )*/
+
+        alert("Logue para prosseguir")
+
+      );
     }
   });
 }
@@ -63,8 +67,6 @@ async function testarChaveAcesso() {
 async function controlFunction(){
 
   
-
-  console.log(teste);
 
   if(chaveAcesso===undefined || chaveAcesso=="undefined"){
 
@@ -94,7 +96,7 @@ async function deslogar(pasta){
 
           method:"POST"
 
-      }).then({
+      }).then(function decide(pasta){
         
         if(pasta){window.location = `../../index.html`
         }else{client.requestAccessToken()}});
@@ -109,7 +111,7 @@ async function deslogar(pasta){
 async function contentControl(){
 
 
-  var teste = await testarChaveAcesso().then(console.log("testou"));
+ /*  var teste =  */await testarChaveAcesso().then(console.log(response));
 
   if(chaveAcesso!=undefined){
 
@@ -117,7 +119,4 @@ async function contentControl(){
   }
 
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 45db023a04082fb95913e3e8365e2d294865fbb2
