@@ -44,28 +44,25 @@ const client = google.accounts.oauth2.initTokenClient({
     },
   });
 
-  function TestarChave() {
-    return new Promise((chaveAcesso)=>{
-      
-       this.chaveAcesso;
-
-      if(this.chaveAcesso===undefined || chaveAcesso=="undefined"){
-
-        chaveAcesso =  false;
-
-      }else{
-
-        chaveAcesso = true
-
-      }
-
-    });
-  }
+// Criar uma função assíncrona que retorna uma promise
+async function testarChaveAcesso() {
+  // Retornar uma promise que resolve se a variável chave acesso não for indefinida
+  return new Promise((resolve, reject) => {
+    // Verificar se a variável chave acesso existe
+    if (typeof chaveAcesso !== "undefined") {
+      // Resolver a promise com o valor da variável chave acesso
+      resolve(chaveAcesso);
+    } else {
+      // Rejeitar a promise com um erro
+      reject(new Error("A variável chave acesso é indefinida"));
+    }
+  });
+}
 
 
 async function controlFunction(){
 
-  var teste = await TestarChave().then(console.log());
+  
 
   console.log(teste);
 
@@ -78,10 +75,6 @@ async function controlFunction(){
         contentControl();
         
     }
-
-
-
-    
 
   }else{
 
@@ -113,8 +106,10 @@ async function deslogar(pasta){
 
 }
 
-function contentControl(){
+async function contentControl(){
 
+
+  var teste = await testarChaveAcesso().then(console.log("testou"));
 
   if(chaveAcesso!=undefined){
 
