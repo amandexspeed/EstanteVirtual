@@ -47,7 +47,7 @@ const client = google.accounts.oauth2.initTokenClient({
   function TestarChave() {
     return new Promise((chaveAcesso)=>{
       
-      chaveAcesso = the
+      chaveAcesso = this.chaveAcesso;
 
       if(chaveAcesso===undefined || chaveAcesso=="undefined"){
 
