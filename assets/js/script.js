@@ -62,22 +62,6 @@ async function testarChaveAcesso() {
   });
 }
 
-async function testarChaveAcesso() {
-  // Retornar uma promise que resolve se a variável chave acesso não for indefinida
-  return new Promise((resolve, reject) => {
-    // Verificar se a variável chave acesso existe
-    if (typeof chaveAcesso !== "undefined") {
-      // Resolver a promise com o valor da variável chave acesso
-      resolve(chaveAcesso);
-    } else {
-      // Rejeitar a promise com um erro
-      reject(/* new Error("A variável chave acesso é indefinida" ) */
-        alert("Logue para prosseguir"),
-        client.requestAccessToken()
-      );
-    }
-  });
- }
 
 
 
