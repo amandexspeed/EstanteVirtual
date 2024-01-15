@@ -13,12 +13,13 @@ function getUrlVars() {
 chaveAcesso = getUrlVars()["chA"];
 var tema = getUrlVars()["theme"];
 
-
 function loadingTheme(){
+
+  
+  let theme = document.querySelector(".theme");
 
   if(tema=="undefined"){
     let lightMode = window.matchMedia ("(prefers-color-scheme: light)");
-    let theme = document.querySelector(".theme");
     if (lightMode.matches) {
 
         theme.classList.remove('dark');
