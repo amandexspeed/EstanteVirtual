@@ -110,6 +110,12 @@
    color: rgb(170, 9, 9);
 }
 
+.theme.dark .links h1{
+
+   color: white;
+
+}
+
 /* Edição do texto do resultado */
 
 .theme.light .resultado a{
@@ -191,7 +197,13 @@
 
 }
 
-.theme.light .links a:hover{
+.theme.dark .deslogar{
+
+   color: white;
+
+}
+
+.theme.light .deslogar:hover{
 
    color: rgb(170, 9, 9);
 

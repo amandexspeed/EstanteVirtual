@@ -288,16 +288,10 @@ body{
 }
 
 .links h1{
-    /* background-color:rgba(18, 32, 78, 0.2);
-    padding: 10% 5%;
-    margin: 2%;
-    border: 1px solid;
-    
-    font-size: 24px; */
+   
     text-align: center;
     font-weight: bold;
-    color: white;
-    text-shadow: -1px -1px 0px gray, -1px 1px 0px black, 1px -1px 0px black, 1px 0px 0px black;
+    
 
 }
 
@@ -306,10 +300,9 @@ body{
     position: absolute;
     right: 10px;
     top: 10px;
-    color: white;
     border: 1px solid;
     padding: 1%;
-    text-shadow: -1px -1px 0px gray, -1px 1px 0px black, 1px -1px 0px black, 1px 0px 0px black;
+  
 
 }
 
