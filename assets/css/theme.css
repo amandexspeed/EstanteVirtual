@@ -1,3 +1,5 @@
+/* controle geral do tema */
+
 .theme.dark{
 
     color: white;
@@ -6,6 +8,8 @@
     
 
 }
+
+
 
 .btnTheme{
 
@@ -22,11 +26,10 @@
     border: none;
     background-size: cover;
     background-repeat: no-repeat;
-    
-
 
  }
 
+ /* controle geral do tema */
 
  .theme.dark .triggerTheme{
 
@@ -80,5 +83,88 @@
 
       background:none;
       border: none;
+
+}
+
+/* Edição da pesquisa */
+
+.theme.dark .pesquisa{
+
+   color: white;
+   
+}
+
+.theme.dark .resultado{
+
+   color: white;
+   
+}
+
+.theme.light .pesquisa a:hover{
+
+   color: cyan;
+}
+
+.theme.dark .pesquisa a:hover{
+
+   color: blue;
+}
+
+/* Edição do resultado */
+
+.theme.dark .resultado a{
+
+   color: white;
+
+}
+
+.theme.light .resultado a:hover{
+
+   color: cyan;
+
+}
+
+.theme.dark .resultado a:hover{
+
+   color: blue;
+
+}
+
+.info{
+
+   text-decoration: underline solid 1px;
+   padding: 0.3% 0 0.5%;
+
+}
+
+.info:hover{
+
+   color: cyan;
+
+}
+
+.pFav{
+
+   text-decoration: underline solid 1px;
+   padding: 0.2% 0 1%;
+
+}
+
+.pFav:hover{
+
+   color: cyan;
+
+}
+
+.pEst{
+
+   text-decoration: underline solid 1px;
+   padding: 0.2% 0 1%
+
+}
+
+.pEst:hover{
+
+   color: cyan;
 
 }

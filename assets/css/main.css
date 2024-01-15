@@ -14,10 +14,10 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url("https://th.bing.com/th/id/OIG.Fug2qd2KwjqlZ_36rJX0?pid=ImgGn");
+    /* background-image: url("https://th.bing.com/th/id/OIG.Fug2qd2KwjqlZ_36rJX0?pid=ImgGn");
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-size: cover;
+    background-size: cover; */
 
 }
 
@@ -32,14 +32,6 @@ body{
 
 }
 
-/* .theme.dark{
-
-    color: white;
-    background-color: black;
-    
-
-} */
-
 .pesquisa{
 
     display: flex;
@@ -49,8 +41,6 @@ body{
     align-items: center;
     flex-direction: column;
     margin: 1%;
-    color: white;
-    text-shadow: -1px -1px 0px gray, -1px 1px 0px black, 1px -1px 0px black, 1px 0px 0px black;
     
 }
 
@@ -81,10 +71,7 @@ body{
     border: 1px solid;
 }
 
-.pesquisa a:hover{
 
-    color: cyan;
-}
 
 .resultado{
  
@@ -92,8 +79,6 @@ body{
     flex-direction: column;
     height: 75vh;
     width:85vw;
-    color: white;
-    text-shadow: -1px -1px 0px gray, -1px 1px 0px black, 1px -1px 0px black, 1px 0px 0px black;
 
 }
 
@@ -108,20 +93,11 @@ body{
 
 }
 
-
-
 .resultado a{
 
-    color: white;
     text-decoration: underline solid 1px;
     padding: 0.6% 0 1%;
  
-}
-
-.resultado a:hover{
-
-    color: cyan;
-
 }
 
 .info{
