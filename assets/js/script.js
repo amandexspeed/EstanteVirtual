@@ -21,9 +21,9 @@ function getUrlVars() {
       vars[key] = value;
     });
     return vars;
-  }
+}
 
-  chaveAcesso = getUrlVars()["chA"];
+chaveAcesso = getUrlVars()["chA"];
 
 var passaValor = function (pagina) {
     
@@ -55,6 +55,24 @@ async function testarChaveAcesso() {
     } else {
       // Rejeitar a promise com um erro
       reject(/* new Error("A variável chave acesso é indefinida" ) */
+        alert("Logue para prosseguir"),
+        client.requestAccessToken(),
+        contentControl()
+      );
+    }
+  });
+}
+
+async function ValidaAcessoPágina(pagina) {
+  return new Promise((resolve, reject) => {
+
+    if (typeof chaveAcesso !== "undefined") {
+
+      resolve(passaValor(pagina));
+
+    } else {
+     
+      reject(
         alert("Logue para prosseguir"),
         client.requestAccessToken()
       );
@@ -98,31 +116,6 @@ async function deslogar(pasta){
 
 
 }
-
-
-
-/* function casoErro(){
-    alert("Logue para prosseguir")
-    client.requestAccessToken()
-    contentControl() ;
-  })*/
-
-  /* if(chaveAcesso===undefined || chaveAcesso=="undefined"){
-
-    client.requestAccessToken();
-
-    if(chaveAcesso!=undefined){
-
-        contentControl();
-        
-    }
-
-  }else{
-
-    
-    contentControl();
-
-  } */
 
   var TriggerTheme = document.querySelectorAll('.triggerTheme')
 
