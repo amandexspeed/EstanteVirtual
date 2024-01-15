@@ -2,19 +2,6 @@ var chaveAcesso;
 
 const apiKey = "AIzaSyB5ouI6UWA1W_ICu3dE-veEic1_VW-WR_4"
 
-function loadingTheme(){
-
-    let lightMode = window.matchMedia ("(prefers-color-scheme: light)");
-    let theme = document.querySelector(".theme");
-    if (lightMode.matches) {
-
-        theme.classList.remove('dark');
-        theme.classList.add('light');
-    
-    }
-
-}
-
 function getUrlVars() {
     var vars = {};
     var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
@@ -24,10 +11,47 @@ function getUrlVars() {
 }
 
 chaveAcesso = getUrlVars()["chA"];
+var tema = getUrlVars()["theme"];
+
+
+function loadingTheme(){
+
+  if(tema=="undefined"){
+    let lightMode = window.matchMedia ("(prefers-color-scheme: light)");
+    let theme = document.querySelector(".theme");
+    if (lightMode.matches) {
+
+        theme.classList.remove('dark');
+        theme.classList.add('light');
+    
+    }
+  }else{
+
+    if(tema == "light"){
+
+      theme.classList.remove('dark');
+      theme.classList.add('light');
+
+    }
+
+  }
+
+}
 
 var passaValor = function (pagina) {
     
-    window.location = `${pagina}.html?chA=${chaveAcesso}`;
+    const body = document.querySelector(".theme"); 
+    if(body.classList.contains("light")){
+
+      tema = "light"
+
+    }else{
+
+      tema = "dark"
+
+    }
+
+    window.location = `${pagina}.html?chA=${chaveAcesso}&theme=${tema}`;
 
 }
 
@@ -79,7 +103,7 @@ async function ValidaAcessoPágina(pagina) {
 
 async function contentControl(){
 
-    await testarChaveAcesso().then(document.querySelectorAll(".p").forEach((e)=>e.classList.toggle("load"))).catch(contentControl())
+    await testarChaveAcesso().then(document.querySelectorAll(".p").forEach((e)=>e.classList.toggle("load"))).catch()
 
     
 }
