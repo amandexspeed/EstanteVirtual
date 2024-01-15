@@ -8,8 +8,11 @@
     <meta name="google-site-verification" content="Q7oYh3TCAZH4VUiNlJNrftRZY_lhE9GlzMAzmq5fxqg" />
     
     <title>Estante virtual</title>
-    <script src="assets/js/script.js" defer></script>
+    
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+
+    <script src="assets/js/script.js" onload="loadingTheme()" defer></script>
     <script src="https://apis.google.com/js/api:client.js" defer></script>
     <script src="https://accounts.google.com/gsi/client" 
      onload="console.log('TODO: add onload function')">  
@@ -23,8 +26,6 @@
 
 <body class="theme dark" onload="controlFunction()">
 
-    
-
     <div class="deslogar" onload="contentControl()">
         <div class="p load" id="gSignInWrapper">
         <span class="label">Logue para continuar:</span>
@@ -36,7 +37,13 @@
 
             </div>
         </div>
-        <p class="p" onclick="(deslogar(false))">Deslogar</p><!-- <p class="p load" onclick="(client.requestAccessToken())">Logue na conta do google</p> --></div>
+        <p class="p" onclick="(deslogar(false))">Deslogar</p><!-- <p class="p load" onclick="(client.requestAccessToken())">Logue na conta do google</p> -->
+    </div>
+
+    <div class="btnTheme">
+        <button class="triggerTheme" type="button">
+        <div class="icon"></div></button>
+    </div>
 
     <div class="links">
         

@@ -1,0 +1,84 @@
+.theme.dark{
+
+    color: white;
+    background: none;
+    background-color: black;
+    
+
+}
+
+.btnTheme{
+
+   position: absolute;
+   top: 10px;
+   left: 10px;
+
+}
+
+.theme .triggerTheme .icon{
+
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+
+ }
+
+
+ .theme.dark .triggerTheme{
+
+    background-image: url(../img/sol.png);
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+ }
+
+ .theme.light .triggerTheme{
+
+    background-image: url(../img/lua.png);
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+ }
+
+ .theme.dark .triggerTheme:hover {
+
+    border:2px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 5px;
+
+ }
+
+ .theme.light .triggerTheme:hover{
+
+    border:2px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 5px;
+
+ }
+ .theme .triggerTheme:hover {
+
+    padding: 2px;
+    margin: 2px;
+
+ }
+
+.triggerTheme{
+
+      background:none;
+      border: none;
+
+}
