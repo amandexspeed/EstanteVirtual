@@ -56,8 +56,7 @@ async function testarChaveAcesso() {
       // Rejeitar a promise com um erro
       reject(/* new Error("A variável chave acesso é indefinida" ) */
         alert("Logue para prosseguir"),
-        client.requestAccessToken(),
-        contentControl()
+        client.requestAccessToken()
       );
     }
   });
@@ -83,12 +82,11 @@ async function ValidaAcessoPágina(pagina) {
 
 async function contentControl(){
 
-  if(chaveAcesso!=undefined){
+    await testarChaveAcesso().then(document.querySelectorAll(".p").forEach((e)=>e.classList.toggle("load"))).catch(testarChaveAcesso())
 
-    document.querySelectorAll(".p").forEach((e)=>e.classList.toggle("load"));
-  }
-
+    
 }
+
 
 
 async function controlFunction(){

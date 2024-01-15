@@ -9,8 +9,11 @@
     
     <title>Estante virtual</title>
     
+    <link rel="shortcut icon" href="assets/img/OIP.ico" type="image/x-icon">
+    
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/theme.css">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
     </style>
@@ -25,14 +28,14 @@
 </head>
 
 
-<body class="theme dark" onload="controlFunction()">
+<body class="theme dark" onload="contentControl()">
 
     <div class="btnTheme">
         <button class="triggerTheme" type="button">
         <div class="icon"></div></button>
     </div>
 
-    <div class="deslogar" onload="contentControl()">
+    <div class="deslogar">
         <div class="p load" id="gSignInWrapper">
         <span class="label">Logue para continuar:</span>
             <div id="customBtn" onclick="(client.requestAccessToken())" class="customGPlusSignIn">
@@ -54,9 +57,9 @@
 
         <a onclick="ValidaAcessoPágina('assets/pages/pesquisaLivro')">Tela pesquisa livros</a>
 
-        <a onclick="passaValor('assets/pages/pesquisaFilmes')">Tela pesquisa filmes</a>
+        <a onclick="ValidaAcessoPágina('assets/pages/pesquisaFilmes')">Tela pesquisa filmes</a>
 
-        <a onclick="passaValor('assets/pages/estantePessoal')">Tela estante livros</a>
+        <a onclick="ValidaAcessoPágina('assets/pages/estantePessoal')">Tela estante livros</a>
     </div>
 
 </body>
