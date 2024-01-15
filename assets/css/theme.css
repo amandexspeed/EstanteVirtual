@@ -29,7 +29,7 @@
 
  }
 
- /* controle geral do tema */
+ /* controle do botão */
 
  .theme.dark .triggerTheme{
 
@@ -102,15 +102,21 @@
 
 .theme.light .pesquisa a:hover{
 
-   color: cyan;
+   color: rgb(170, 9, 9);
 }
 
 .theme.dark .pesquisa a:hover{
 
-   color: blue;
+   color: rgb(170, 9, 9);
 }
 
-/* Edição do resultado */
+/* Edição do texto do resultado */
+
+.theme.light .resultado a{
+
+   color: black;
+
+}
 
 .theme.dark .resultado a{
 
@@ -120,7 +126,7 @@
 
 .theme.light .resultado a:hover{
 
-   color: cyan;
+   color: rgb(170, 9, 9);
 
 }
 
@@ -130,41 +136,70 @@
 
 }
 
-.info{
+.theme.light .info:hover{
 
-   text-decoration: underline solid 1px;
-   padding: 0.3% 0 0.5%;
-
-}
-
-.info:hover{
-
-   color: cyan;
+   color: rgb(170, 9, 9);
 
 }
 
-.pFav{
+.theme.dark .info:hover{
 
-   text-decoration: underline solid 1px;
-   padding: 0.2% 0 1%;
-
-}
-
-.pFav:hover{
-
-   color: cyan;
+   color: blue;
 
 }
 
-.pEst{
+.theme.light .pFav:hover{
 
-   text-decoration: underline solid 1px;
-   padding: 0.2% 0 1%
+   color: rgb(170, 9, 9);
+
+}
+
+.theme.dark .pFav:hover{
+
+   color: blue;
 
 }
 
-.pEst:hover{
 
-   color: cyan;
+.theme.light .pEst:hover{
+
+   color: rgb(170, 9, 9);
 
 }
+
+.theme.dark .pEst:hover{
+
+   color: blue;
+
+}
+
+.theme.dark .links a{
+
+   color: white;
+
+}
+
+.theme.light .links a:hover{
+
+   color: rgb(170, 9, 9);
+
+}
+
+.theme.dark .links a:hover{
+
+   color: blue;
+
+}
+
+.theme.light .links a:hover{
+
+   color: rgb(170, 9, 9);
+
+}
+
+.theme.dark .deslogar:hover{
+
+   color: blue;
+
+}
+
