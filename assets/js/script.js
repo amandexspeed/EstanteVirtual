@@ -49,12 +49,10 @@ async function testarChaveAcesso() {
   // Retornar uma promise que resolve se a variável chave acesso não for indefinida
   return new Promise((resolve, reject) => {
     // Verificar se a variável chave acesso existe
-    if (typeof chaveAcesso !== "undefined") {
-      // Resolver a promise com o valor da variável chave acesso
+    if (typeof chaveAcesso !== "undefined" && chaveAcesso != "undefined") {
       resolve(chaveAcesso);
     } else {
-      // Rejeitar a promise com um erro
-      reject(/* new Error("A variável chave acesso é indefinida" ) */
+      reject(
         alert("Logue para prosseguir"),
         client.requestAccessToken()
       );
@@ -70,7 +68,6 @@ async function ValidaAcessoPágina(pagina) {
       resolve(passaValor(pagina));
 
     } else {
-     
       reject(
         alert("Logue para prosseguir"),
         client.requestAccessToken()
@@ -82,17 +79,9 @@ async function ValidaAcessoPágina(pagina) {
 
 async function contentControl(){
 
-    await testarChaveAcesso().then(document.querySelectorAll(".p").forEach((e)=>e.classList.toggle("load"))).catch(testarChaveAcesso())
+    await testarChaveAcesso().then(document.querySelectorAll(".p").forEach((e)=>e.classList.toggle("load"))).catch(contentControl())
 
     
-}
-
-
-
-async function controlFunction(){
-
-  await testarChaveAcesso().then(contentControl()).catch();
-
 }
 
 async function deslogar(pasta){
