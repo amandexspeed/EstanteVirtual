@@ -63,13 +63,19 @@ async function testarChaveAcesso() {
 }
 
 
+async function contentControl(){
 
+  if(chaveAcesso!=undefined){
+
+    document.querySelectorAll(".p").forEach((e)=>e.classList.toggle("load"));
+  }
+
+}
 
 
 async function controlFunction(){
 
   await testarChaveAcesso().then(contentControl()).catch();
-
 
 }
 
@@ -93,14 +99,7 @@ async function deslogar(pasta){
 
 }
 
-async function contentControl(){
 
-  if(chaveAcesso!=undefined){
-
-    document.querySelectorAll(".p").forEach((e)=>e.classList.toggle("load"));
-  }
-
-}
 
 /* function casoErro(){
     alert("Logue para prosseguir")
@@ -124,3 +123,18 @@ async function contentControl(){
     contentControl();
 
   } */
+
+  var TriggerTheme = document.querySelectorAll('.triggerTheme')
+
+  TriggerTheme.forEach((trigger)=>{
+    trigger.addEventListener('click',(e)=>{
+
+        let body = document.querySelector("body");
+
+        let theme = document.querySelector(".theme");
+
+        theme.classList.toggle('dark');
+        theme.classList.toggle('light');
+
+    })
+})

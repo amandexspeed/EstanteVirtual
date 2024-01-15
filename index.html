@@ -11,20 +11,26 @@
     
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/theme.css">
-
-    <script src="assets/js/script.js" onload="loadingTheme()" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
+    
     <script src="https://apis.google.com/js/api:client.js" defer></script>
     <script src="https://accounts.google.com/gsi/client" 
      onload="console.log('TODO: add onload function')">  
      defer
     </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-    </style>
+    <script src="assets/js/script.js" onload="loadingTheme()" defer></script>
+    
 </head>
 
 
 <body class="theme dark" onload="controlFunction()">
+
+    <div class="btnTheme">
+        <button class="triggerTheme" type="button">
+        <div class="icon"></div></button>
+    </div>
 
     <div class="deslogar" onload="contentControl()">
         <div class="p load" id="gSignInWrapper">
@@ -40,10 +46,7 @@
         <p class="p" onclick="(deslogar(false))">Deslogar</p><!-- <p class="p load" onclick="(client.requestAccessToken())">Logue na conta do google</p> -->
     </div>
 
-    <div class="btnTheme">
-        <button class="triggerTheme" type="button">
-        <div class="icon"></div></button>
-    </div>
+    
 
     <div class="links">
         
