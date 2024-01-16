@@ -57,19 +57,17 @@
 
  .theme.dark .triggerTheme:hover {
 
-    border:2px;
-    border-color: white;
-    border-style: solid;
-    border-radius: 5px;
+   width: 50px;
+   height: 50px;
+   border-radius: 5px;
 
  }
 
  .theme.light .triggerTheme:hover{
 
-    border:2px;
-    border-color: black;
-    border-style: solid;
-    border-radius: 5px;
+   width: 50px;
+   height: 50px;
+   border-radius: 5px;
 
  }
  .theme .triggerTheme:hover {
@@ -91,6 +89,7 @@
 .theme.dark .pesquisa{
 
    color: white;
+   border-radius: 10px;
    
 }
 
@@ -102,12 +101,18 @@
 
 .theme.light .pesquisa a:hover{
 
-   color: rgb(255, 0, 0);
+   color: black;
+   background-image: url("https://th.bing.com/th/id/OIP.p8PLu7jS8Zl2ynv1YhZEUwAAAA?pid=ImgDet&w=199&h=184&c=7&dpr=1,3");
+   background-size:cover;
+   background-repeat: no-repeat;
+   
 }
 
 .theme.dark .pesquisa a:hover{
 
-   color: rgb(61, 61, 228);
+   background-image: url("https://th.bing.com/th/id/OIP.MG8emb07mYZKlYaHOC1PSwAAAA?pid=ImgDet&w=199&h=199&c=7&dpr=1,3");
+   background-size:cover;
+   background-repeat: no-repeat;
 }
 
 .theme.dark .links h1{
@@ -188,20 +193,16 @@
 .theme.light .links a:hover{
 
    color: black;
-   /* background-image: url(../img/padrao.png); */ 
-   /* background-image: url("https://th.bing.com/th/id/OIP.tJrwbeL9ifXIaXOPB9FO5wHaFj?pid=ImgDet&w=199&h=149&c=7&dpr=1,3"); */
-   /* background-image: url("https://th.bing.com/th/id/OIP.H_LHtBwAq8dyDIs9jdqkmgHaHa?pid=ImgDet&w=199&h=199&c=7&dpr=1,3"); */
-   background-image: url();
+   background-image: url("https://th.bing.com/th/id/OIP.p8PLu7jS8Zl2ynv1YhZEUwAAAA?pid=ImgDet&w=199&h=184&c=7&dpr=1,3");
    background-size:cover;
    background-repeat: no-repeat;
 }
 
 .theme.dark .links a:hover{
    
-   /* background-image: url(../img/padraoAzul.jpg); */
-   background-image: url(../img/padrao.png);/* 
-   background-image: url("https://cdn.shopify.com/s/files/1/0046/3339/5286/products/Red_white_bluechevronstripes.jpg?v=1619449158"); */
-
+   background-image: url("https://th.bing.com/th/id/OIP.MG8emb07mYZKlYaHOC1PSwAAAA?pid=ImgDet&w=199&h=199&c=7&dpr=1,3");
+   background-size:cover;
+   background-repeat: no-repeat;
 
 }
 
@@ -213,15 +214,17 @@
 
 .theme.light .deslogar:hover{
 
-   color: rgb(255, 0, 0);
+   background-image: url("https://th.bing.com/th/id/OIP.p8PLu7jS8Zl2ynv1YhZEUwAAAA?pid=ImgDet&w=199&h=184&c=7&dpr=1,3");
+   background-size:cover;
+   background-repeat: no-repeat;
 
 }
 
 .theme.dark .deslogar:hover{
 
-   background-image: url(../img/padraoAzul.jpg);
-   color: black;
-   background-size: contain;
+   background-image: url("https://th.bing.com/th/id/OIP.MG8emb07mYZKlYaHOC1PSwAAAA?pid=ImgDet&w=199&h=199&c=7&dpr=1,3");
+   color: white;
+   background-size: cover;
 
 }
 
