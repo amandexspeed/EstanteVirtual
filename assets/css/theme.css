@@ -116,8 +116,8 @@
 
 .theme.dark .pesquisa button{
 
-   background-color: black;
-   color: #000;
+   background-color: rgb(39, 39, 39);
+   color: white;
 }
 
 .theme.dark .pesquisa button:hover{
@@ -153,7 +153,7 @@
 
 .theme.dark .resultado a:hover{
 
-   color: rgb(61, 61, 228);
+   color: rgb(61, 170, 189);
    
 }
 
@@ -165,7 +165,7 @@
 
 .theme.dark .info:hover{
 
-   color: rgb(61, 61, 228);
+   color: rgb(61, 170, 189);
 
 }
 
@@ -177,7 +177,7 @@
 
 .theme.dark .pFav:hover{
 
-   color: rgb(61, 61, 228);
+   color: rgb(61, 170, 189);
 
 }
 
@@ -190,7 +190,7 @@
 
 .theme.dark .pEst:hover{
 
-   color: rgb(61, 61, 228);
+   color: rgb(61, 170, 189);
 
 }
 
