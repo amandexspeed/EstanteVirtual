@@ -89,7 +89,6 @@
 .theme.dark .pesquisa{
 
    color: white;
-   border-radius: 10px;
    
 }
 
@@ -113,6 +112,17 @@
    background-image: url("https://th.bing.com/th/id/OIP.MG8emb07mYZKlYaHOC1PSwAAAA?pid=ImgDet&w=199&h=199&c=7&dpr=1,3");
    background-size:cover;
    background-repeat: no-repeat;
+}
+
+.theme.dark .pesquisa button{
+
+   background-color: black;
+   color: #000;
+}
+
+.theme.dark .pesquisa button:hover{
+
+   background-color: gray;
 }
 
 .theme.dark .links h1{

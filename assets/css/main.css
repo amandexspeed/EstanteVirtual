@@ -36,8 +36,8 @@ body{
 
     display: flex;
     justify-content: center;
-    height: 25vh;
-    width:85vw;
+    height: 25%;
+    width:85%;
     align-items: center;
     flex-direction: column;
     margin: 1%;
@@ -67,18 +67,31 @@ body{
 .pesquisa a{
 
     margin: 1% 0;
-    padding: 0.5%;
+    padding: 0.6%;
     border: 1px solid;
+    border-radius: 12px;
 }
 
+.pesquisa input{
+    height: 10%;
+    width: 60%;
+    
+    
+}
+
+.pesquisa button{
+    text-align: center;
+    padding: 1%;
+    
+}
 
 
 .resultado{
  
     display: flex;
     flex-direction: column;
-    height: 75vh;
-    width:85vw;
+    height: 75%;
+    width:85%;
 
 }
 
@@ -121,17 +134,6 @@ body{
  
 }
 
-.pesquisa input{
-    height: 10%;
-    width: 60%;
-    
-}
-
-.pesquisa button{
-    height: 10%;
-    width: 60%;
-   
-}
 
 #lista{
 
@@ -300,6 +302,7 @@ body{
     right: 10px;
     top: 10px;
     border: 1px solid;
+    border-radius: 10px;
     padding: 1%;
   
 
