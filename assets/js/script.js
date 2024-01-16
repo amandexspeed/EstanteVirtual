@@ -57,32 +57,35 @@ var passaValor = function (pagina) {
 }
 
 async function pedirChaveAcesso(){
-const client = google.accounts.oauth2.initTokenClient({
-    client_id: '380330172484-a5l4ppmvnvlq48d7cumdmep189s7sv6g.apps.googleusercontent.com',
-    scope: 'https://www.googleapis.com/auth/books',
-    callback: async (tokenResponse) => {
-        
-        if (tokenResponse!=null && tokenResponse.access_token!=null) {
+  const client = google.accounts.oauth2.initTokenClient({
+      client_id: '380330172484-a5l4ppmvnvlq48d7cumdmep189s7sv6g.apps.googleusercontent.com',
+      scope: 'https://www.googleapis.com/auth/books',
+      callback: async (tokenResponse) => {
           
-          chaveAcesso = tokenResponse.access_token;
+          if (tokenResponse!=null && tokenResponse.access_token!=null) {
             
-        }
-
-        return new Promise((resolve, reject) => {
-
-          if (typeof chaveAcesso !== "undefined") {
-      
-            resolve(document.querySelectorAll(".deslogar").forEach((e)=>e.classList.toggle("load")));
-      
-          } else {
-            reject(
-              alert("Logue para prosseguir"),
-              client.requestAccessToken(),
-            );
+            chaveAcesso = tokenResponse.access_token;
+              
           }
-        });
-    },
-  });
+
+          return new Promise((resolve, reject) => {
+
+            if (typeof chaveAcesso !== "undefined" && chaveAcesso!=null) {
+        
+              resolve(document.querySelectorAll(".deslogar").forEach((e)=>e.classList.toggle("load")));
+        
+            } else {
+              reject(
+                alert("Logue para prosseguir"),
+                pedirChaveAcesso(),
+              );
+            }
+          });
+      }
+
+    });
+
+    client.requestAccessToken();
 }
 
 // Criar uma função assíncrona que retorna uma promise
@@ -95,8 +98,7 @@ async function testarChaveAcesso() {
     } else {
       reject(
         alert("Logue para prosseguir"),
-        client.requestAccessToken(),
-        testarChaveAcesso()
+        pedirChaveAcesso()
       );
     }
   });
