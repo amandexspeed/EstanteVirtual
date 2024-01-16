@@ -161,14 +161,15 @@ async function loadData(){
     }
 }
 
+document.getElementById('titulo').addEventListener('keydown', function(event) {
+    if (event.keyCode === 13) {
+        loadData();
+    }
+});
+
 document.getElementById('autor').addEventListener('keydown', function(event) {
     if (event.keyCode === 13) {
         loadData();
     }
 });
 
-document.getElementById('titulo').addEventListener('keydown', function(event) {
-    if (event.keyCode === 13) {
-        loadData();
-    }
-});

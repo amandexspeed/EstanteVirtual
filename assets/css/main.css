@@ -66,6 +66,12 @@ body{
 
 }
 
+.est{
+
+    padding: 0.5% 0;
+
+}
+
 .pesquisa a{
 
     margin: 1% 0;
@@ -84,7 +90,7 @@ body{
 .pesquisa button{
     text-align: center;
     padding: 0.6%;
-    border-radius: 15%;
+    border-radius: 12px;
 }
 
 
@@ -155,6 +161,8 @@ body{
 .pTítulo{
     font-size: 24px;
     font-weight: bold;
+    padding-top: 1%;
+    padding-bottom: 0.5%;
 }
 
 #customBtn {
