@@ -94,7 +94,9 @@ async function testarChaveAcesso() {
   return new Promise((resolve, reject) => {
     // Verificar se a variável chave acesso existe
     if (typeof chaveAcesso !== "undefined" && chaveAcesso != "undefined") {
-      resolve(chaveAcesso);
+
+      resolve(document.querySelectorAll(".deslogar").forEach((e)=>e.classList.toggle("load")));
+      
     } else {
       reject(
         alert("Logue para prosseguir"),
@@ -123,7 +125,7 @@ async function ValidaAcessoPágina(pagina) {
 
 async function contentControl(){
 
-    await testarChaveAcesso().then(document.querySelectorAll(".deslogar").forEach((e)=>e.classList.toggle("load")));
+    await testarChaveAcesso()
 
     
 }
