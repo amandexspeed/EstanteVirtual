@@ -182,21 +182,22 @@
 .theme.dark .links a{
 
    color: white;
-   text-shadow: 2px 1px 2px black, 1px 2px 2px black , 3px 3px 2px black;
 
 }
 
 .theme.light .links a:hover{
 
    color: black;
-   background-image: url(../img/padrao.png);
+  /*  background-image: url(../img/padrao.png); */
+   background-image: url("https://cdn.shopify.com/s/files/1/0046/3339/5286/products/Red_white_bluechevronstripes.jpg?v=1619449158");
 }
 
 .theme.dark .links a:hover{
-
-   color: white;
    
-   background-image: url(../img/padrao.png);
+   /* background-image: url(../img/padraoAzul.jpg); */
+   background-image: url("https://cdn.shopify.com/s/files/1/0046/3339/5286/products/Red_white_bluechevronstripes.jpg?v=1619449158");
+   
+   color: black;
 
 }
 
@@ -214,7 +215,9 @@
 
 .theme.dark .deslogar:hover{
 
-   color: rgb(61, 61, 228);
+   background-image: url(../img/padraoAzul.jpg);
+   color: black;
+   background-size: contain;
 
 }
 
