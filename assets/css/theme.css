@@ -139,7 +139,7 @@
 .theme.dark .resultado a:hover{
 
    color: rgb(61, 61, 228);
-
+   
 }
 
 .theme.light .info:hover{
@@ -182,18 +182,21 @@
 .theme.dark .links a{
 
    color: white;
+   text-shadow: 2px 1px 2px black, 1px 2px 2px black , 3px 3px 2px black;
 
 }
 
 .theme.light .links a:hover{
 
-   color: rgb(255, 0, 0);
-
+   color: black;
+   background-image: url(../img/padrao.png);
 }
 
 .theme.dark .links a:hover{
 
-   color: rgb(61, 61, 228);
+   color: white;
+   
+   background-image: url(../img/padrao.png);
 
 }
 
