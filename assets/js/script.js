@@ -56,6 +56,7 @@ var passaValor = function (pagina) {
 
 }
 
+async function pedirChaveAcesso(){
 const client = google.accounts.oauth2.initTokenClient({
     client_id: '380330172484-a5l4ppmvnvlq48d7cumdmep189s7sv6g.apps.googleusercontent.com',
     scope: 'https://www.googleapis.com/auth/books',
@@ -66,8 +67,23 @@ const client = google.accounts.oauth2.initTokenClient({
           chaveAcesso = tokenResponse.access_token;
             
         }
+
+        return new Promise((resolve, reject) => {
+
+          if (typeof chaveAcesso !== "undefined") {
+      
+            resolve(document.querySelectorAll(".deslogar").forEach((e)=>e.classList.toggle("load")));
+      
+          } else {
+            reject(
+              alert("Logue para prosseguir"),
+              client.requestAccessToken(),
+            );
+          }
+        });
     },
   });
+}
 
 // Criar uma função assíncrona que retorna uma promise
 async function testarChaveAcesso() {
@@ -79,7 +95,8 @@ async function testarChaveAcesso() {
     } else {
       reject(
         alert("Logue para prosseguir"),
-        client.requestAccessToken()
+        client.requestAccessToken(),
+        testarChaveAcesso()
       );
     }
   });
@@ -95,7 +112,7 @@ async function ValidaAcessoPágina(pagina) {
     } else {
       reject(
         alert("Logue para prosseguir"),
-        client.requestAccessToken()
+        client.requestAccessToken(),
       );
     }
   });
@@ -104,7 +121,7 @@ async function ValidaAcessoPágina(pagina) {
 
 async function contentControl(){
 
-    await testarChaveAcesso().then(document.querySelectorAll(".p").forEach((e)=>e.classList.toggle("load"))).catch(testarChaveAcesso())
+    await testarChaveAcesso().then(document.querySelectorAll(".deslogar").forEach((e)=>e.classList.toggle("load")));
 
     
 }

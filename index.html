@@ -35,8 +35,9 @@
         <div class="icon"></div></button>
     </div>
 
-    
-        <div class="p load" id="gSignInWrapper">
+
+    <div class="deslogar load">
+        <div id="gSignInWrapper">
         <span class="label">Logue para continuar:</span>
             <div id="customBtn" onclick="(client.requestAccessToken())" class="customGPlusSignIn">
 
@@ -46,10 +47,12 @@
 
             </div>
         </div>
-        <div class="deslogar">
+    </div>
 
-            <p class="p" onclick="(deslogar(false))">Deslogar</p>
-        <!-- <p class="p load" onclick="(client.requestAccessToken())">Logue na conta do google</p> -->
+    <div class="deslogar" onclick="(deslogar(false))">
+
+        <p>Deslogar</p>
+    <!-- <p class="p load" onclick="(client.requestAccessToken())">Logue na conta do google</p> -->
     </div>
 
     
