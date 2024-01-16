@@ -104,7 +104,7 @@ async function ValidaAcessoPágina(pagina) {
 
 async function contentControl(){
 
-    await testarChaveAcesso().then(document.querySelectorAll(".p").forEach((e)=>e.classList.toggle("load"))).catch()
+    await testarChaveAcesso().then(document.querySelectorAll(".p").forEach((e)=>e.classList.toggle("load"))).catch(testarChaveAcesso())
 
     
 }
