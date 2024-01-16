@@ -206,6 +206,8 @@
    background-image: url("https://th.bing.com/th/id/OIP.p8PLu7jS8Zl2ynv1YhZEUwAAAA?pid=ImgDet&w=199&h=184&c=7&dpr=1,3");
    background-size:cover;
    background-repeat: no-repeat;
+   border: none;
+   box-shadow: rgba(0, 0, 0, 0.4) 6px 8px 5px;
 }
 
 .theme.dark .links a:hover{
@@ -213,6 +215,8 @@
    background-image: url("https://th.bing.com/th/id/OIP.MG8emb07mYZKlYaHOC1PSwAAAA?pid=ImgDet&w=199&h=199&c=7&dpr=1,3");
    background-size:cover;
    background-repeat: no-repeat;
+   border: none;
+   box-shadow: rgba(120, 121, 121, 0.4) 1px 0px 0px 2px, rgba(136, 138, 138, 0.65) 1px 4px 6px -1px, rgba(155, 156, 156, 0.08) 1px 1px 0px inset;
 
 }
 
