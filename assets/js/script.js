@@ -141,7 +141,7 @@ async function deslogar(pasta){
       }).then(function decide(pasta){
         
         if(pasta){window.location = `../../index.html`
-        }else{client.requestAccessToken()}});
+        }else{pedirChaveAcesso()}});
 
       
 
