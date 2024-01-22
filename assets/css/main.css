@@ -23,8 +23,18 @@ body{
 
 nav{
 
+    width: 75%;  
+    text-align: center;
     position: relative;
     top: 5%;
+
+}
+
+nav a{
+
+    align-items: center;
+    justify-content: center;  
+    padding-left: 5%;
 
 }
 

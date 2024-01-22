@@ -163,6 +163,18 @@
    
 }
 
+.theme.light nav a:hover{
+
+   color: rgb(255, 0, 0);
+
+}
+
+.theme.dark nav a:hover{
+
+   color: rgb(61, 170, 189);
+   
+}
+
 .theme.light .info:hover{
 
    color: rgb(255, 0, 0);

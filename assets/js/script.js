@@ -125,7 +125,7 @@ async function ValidaAcessoPágina(pagina) {
 
 async function contentControl(){
 
-    await testarChaveAcesso()
+    await testarChaveAcesso();
 
     
 }
