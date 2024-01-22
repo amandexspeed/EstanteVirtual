@@ -21,6 +21,12 @@ body{
 
 }
 
+nav{
+
+    position: relative;
+    top: 5%;
+
+}
 
 .resultado li img{
     margin: auto 0 auto 1%;
@@ -36,13 +42,13 @@ body{
 
     display: flex;
     justify-content: center;
-    height: 25%;
+    height: 30%;
     width:85%;
     align-items: center;
     flex-direction: column;
     margin: 2%;
     position: relative;
-    top: 1.5%;
+    top: 3%;
     
 }
 
@@ -100,7 +106,7 @@ body{
  
     display: flex;
     flex-direction: column;
-    height: 75%;
+    height: 70%;
     width:85%;
 
 }

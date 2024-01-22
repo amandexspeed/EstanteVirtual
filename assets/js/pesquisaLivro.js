@@ -133,14 +133,22 @@ async function loadData(){
             pFav.setAttribute("id",i);
             pFav.addEventListener("click",async e=>{
                 
+                if(typeof chaveAcesso !== "undefined" && chaveAcesso!=null){
                     await fetch(`https://www.googleapis.com/books/v1/mylibrary/bookshelves/0/addVolume?volumeId=${data.items[e.target.id].id}&key=${apiKey}&access_token=${chaveAcesso}`,{
 
                             method:"POST"
 
                     }).then(alert("Adicionado"));
             
+                }else{
+
+                    alert("Logue no google para continuar")
+
+                }
+                
                 
             });
+        
 
             div.appendChild(pFav);
 

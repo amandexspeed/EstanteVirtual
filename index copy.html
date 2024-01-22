@@ -24,6 +24,7 @@
      defer
     </script>
     <script src="assets/js/script.js" onload="loadingTheme()" defer></script>
+    <script src="assets/js/pesquisaLivro.js"  defer></script>
     
 </head>
 
@@ -70,7 +71,25 @@
         <a onclick="ValidaAcessoPágina('assets/pages/pesquisaFilmes')">Tela pesquisa filmes</a>
 
         <a onclick="ValidaAcessoPágina('assets/pages/estantePessoal')">Tela estante livros</a>
+
+        <a onclick="passaValor('../../index')">Tela Inicial</a>
     </div> -->
+
+    <div class="pesquisa">
+        
+        <p>Título</p>
+        <input type="text" name="titulo" id="titulo" placeholder="Digite o título do livro">
+        <p>Autor</p>
+        <input type="text" name="autor" id="autor" placeholder="Digite o autor do livro">
+        <button type="button" onclick="loadData()">Pesquisar</button>
+
+    </div>
+
+    <div class="resultado">
+
+        <ol id="lista"></ol>
+
+    </div>
 
 </body>
 </html>
