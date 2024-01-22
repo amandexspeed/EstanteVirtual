@@ -23,10 +23,13 @@ body{
 
 nav{
 
-    width: 75%;  
+    width: 50%;  
     text-align: center;
     position: relative;
     top: 5%;
+    padding: 1%;
+    border: 1px solid;
+    border-radius: 15px;
 
 }
 
@@ -35,6 +38,13 @@ nav a{
     align-items: center;
     justify-content: center;  
     padding-left: 5%;
+
+}
+
+nav h3{
+
+    font-weight:400;
+    fo
 
 }
 
