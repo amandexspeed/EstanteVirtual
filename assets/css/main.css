@@ -29,6 +29,7 @@ nav{
     top: 1%;
     padding: 1%;
     border: 1px solid;
+    min-width: fit-content;
     border-radius: 15px;
 
 }
@@ -45,15 +46,14 @@ nav a{
 
     display: flex;
     justify-content: center;
-    max-height:40%;
-    min-height: 25%;
+    max-height:30%;
+    min-height: fit-content;
     width:85%;
     align-items: center;
     flex-direction: column;
     margin: 2%;
-    margin-top: 3%;
     position: relative;
-    top: 1%;
+    top: 2%;
     
 }
 
@@ -61,7 +61,7 @@ nav a{
 .pesquisa h3{
 
     font-weight:500;
-    margin: 0.5%;
+    margin-top: 0.5%;
 
 }
 
@@ -118,8 +118,8 @@ nav a{
  
     display: flex;
     flex-direction: column;
-    min-height: 30%;
-    max-height: 70%;
+    min-height: fit-content;
+    max-height: 50%;
     width:85%;
     margin-top: 2%;
     
