@@ -140,6 +140,7 @@ async function deslogar(pasta){
 
       }).then(()=>{
         
+        chaveAcesso = undefined;
         if(pasta){window.location = `../../index.html`
         }else{
           document.querySelectorAll(".deslogar").forEach((e)=>e.classList.toggle("load"));
