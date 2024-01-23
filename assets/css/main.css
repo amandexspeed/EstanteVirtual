@@ -101,15 +101,6 @@ nav a{
 
 }
 
-.pesquisa a{
-
-    margin: 1% 0;
-    padding: 0.6%;
-    border: 1px solid;
-    border-radius: 12px;
-}
-
-
 .pesquisa button{
     text-align: center;
     padding: 0.6%;
@@ -448,8 +439,19 @@ nav a{
 
 }
 
+.sobre{
 
+    padding: 1% 0;
+    position: relative;
+    bottom: 1%;
+    width: 50%;
 
+}
 
+.sobre a{
 
-
+    margin: 1% 0;
+    padding: 0.6%;
+    border: 1px solid;
+    border-radius: 12px;
+}
