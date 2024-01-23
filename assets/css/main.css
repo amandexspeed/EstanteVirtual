@@ -39,12 +39,27 @@ nav a{
     align-items: center;
     justify-content: center;  
     padding-left: 5%;
+    
+
+}
+
+.intro{
+
+    padding-top: 1%;
+    text-align: center;
+    max-height: 15%;
+}
+
+.intro h3{
+
+    font-weight:500;
+    margin-top: 0.5%;
 
 }
 
 .pesquisa{
 
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     max-height:30%;
     min-height: fit-content;
@@ -52,17 +67,9 @@ nav a{
     align-items: center;
     flex-direction: column;
     margin: 2%;
-    position: relative;
-    top: 2%;
+    /* position: relative;
+    top: 20%;  */
     
-}
-
-
-.pesquisa h3{
-
-    font-weight:500;
-    margin-top: 0.5%;
-
 }
 
 .pesquisa input{
