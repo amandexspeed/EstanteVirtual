@@ -6,7 +6,6 @@
     background: none;
     background-color: black;
     
-
 }
 
 
@@ -97,9 +96,17 @@
 
    color: white;
    
+   
 }
 
-.theme.light .pesquisa a:hover{
+.theme.dark .sobre a{
+   margin-right: 3%;
+   color: white;
+   text-emphasis: none;
+   text-decoration: none;
+}
+
+.theme.light .sobre a:hover{
 
    color: black;
    background-image: url("https://th.bing.com/th/id/OIP.p8PLu7jS8Zl2ynv1YhZEUwAAAA?pid=ImgDet&w=199&h=184&c=7&dpr=1,3");
@@ -108,7 +115,7 @@
    
 }
 
-.theme.dark .pesquisa a:hover{
+.theme.dark .sobre a:hover{
 
    background-image: url("https://th.bing.com/th/id/OIP.MG8emb07mYZKlYaHOC1PSwAAAA?pid=ImgDet&w=199&h=199&c=7&dpr=1,3");
    background-size:cover;

@@ -440,18 +440,18 @@ nav a{
 }
 
 .sobre{
-
+    display: flex;
+    flex-direction: row;
     padding: 1% 0;
     position: relative;
     bottom: 1%;
-    width: 50%;
+    align-items: center;
+    justify-content: center;
 
 }
 
 .sobre a{
-
+    text-align: center;
     margin: 1% 0;
     padding: 0.6%;
-    border: 1px solid;
-    border-radius: 12px;
 }
