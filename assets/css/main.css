@@ -26,10 +26,10 @@ nav{
     width: 50%;  
     text-align: center;
     position: relative;
-    top: 1%;
+    top: 1%; 
+    min-height: fit-content;
     padding: 1%;
     border: 1px solid;
-    min-width: fit-content;
     border-radius: 15px;
 
 }
