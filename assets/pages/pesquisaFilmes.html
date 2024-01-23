@@ -36,8 +36,14 @@
     
     <div class="deslogar load"><p onclick="(deslogar(true))">Deslogar</p></div>
 
+    <nav> 
+        <a onclick="passaValor('index antiga')">Index antiga</a>
+        <a onclick="ValidaAcessoPágina('../../index')">Index</a>
+        <a onclick="ValidaAcessoPágina('assets/pages/estantePessoal')">Estante livros</a>
+    </nav>
+
     <div class="pesquisa">
-        <a onclick="passaValor('../../index')">Tela Inicial</a>
+        <!-- <a onclick="passaValor('../../index')">Tela Inicial</a> -->
         <p>Nome do filme</p>
         <input type="text" name="titulo" id="titulo" placeholder="Digite o nome do filme">
         <button type="button" onclick="loadData()" class="btn"><p>Pesquisar</p></button>

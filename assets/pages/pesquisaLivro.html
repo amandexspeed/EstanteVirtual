@@ -35,9 +35,14 @@
     </div>
     
     <div class="deslogar load"><p onclick="(deslogar(true))">Deslogar</p></div>
-    
+    <nav> 
+        <a onclick="passaValor('../../index antiga')">Index antiga</a>
+        <a onclick="passaValor('../../index')">Index</a>
+        <a onclick="ValidaAcessoPágina('assets/pages/pesquisaFilmes')">Pesquisa filmes</a>
+        <a onclick="ValidaAcessoPágina('assets/pages/estantePessoal')">Estante livros</a>
+    </nav>
     <div class="pesquisa">
-        <a onclick="passaValor('../../index')">Tela Inicial</a>
+        <!-- <a onclick="passaValor('../../index')">Tela Inicial</a> -->
         <p>Título</p>
         <input type="text" name="titulo" id="titulo" placeholder="Digite o título do livro">
         <p>Autor</p>
