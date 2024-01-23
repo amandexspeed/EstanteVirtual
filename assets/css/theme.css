@@ -99,28 +99,30 @@
    
 }
 
-.theme.dark .sobre a{
+.sobre a{
    margin-right: 3%;
-   color: white;
+   padding: 3%;
    text-emphasis: none;
    text-decoration: none;
 }
 
-.theme.light .sobre a:hover{
+.sobre a:hover{
+
+   font-size: large;
+   font-weight: bold;
+}
+
+.theme.dark .sobre a{
+   color: white;
+   display: inline;
+}
+
+.theme.light .sobre a{
 
    color: black;
-   background-image: url("https://th.bing.com/th/id/OIP.p8PLu7jS8Zl2ynv1YhZEUwAAAA?pid=ImgDet&w=199&h=184&c=7&dpr=1,3");
-   background-size:cover;
-   background-repeat: no-repeat;
    
 }
 
-.theme.dark .sobre a:hover{
-
-   background-image: url("https://th.bing.com/th/id/OIP.MG8emb07mYZKlYaHOC1PSwAAAA?pid=ImgDet&w=199&h=199&c=7&dpr=1,3");
-   background-size:cover;
-   background-repeat: no-repeat;
-}
 
 .theme.dark .pesquisa button{
 
